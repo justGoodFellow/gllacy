@@ -1,19 +1,48 @@
 footer.page-footer
-  //- .page-footer__wrapper
-    .div
-
-    .div
-      ul
-        li
-          a(href='#')
-            | Для поставщиков
-        li
-          a(href='#')
-            | О производстве
-        li
-          a(href='#')
-            | Наши документы
-        li
-          a(href='#')
-            | Экологические стандарты
-    .div
+  .page-footer__container
+    .page-footer__column.page-footer__column--left
+      ul.social-links
+        li.social-links__item
+          a.social-links__link.social-links__link--tw(href='#', target='_blank')
+            span
+              | Твиттер
+        li.social-links__item
+          a.social-links__link.social-links__link--in(href='#', target='_blank')
+            span
+              | Инстаграмм
+        li.social-links__item
+          a.social-links__link.social-links__link--fb(href='#', target='_blank')
+            span
+              | Фейсбук
+        li.social-links__item
+          a.social-links__link.social-links__link--vk(href='#', target='_blank')
+            span
+              | Вконтакте
+    .page-footer__column.page-footer__column--middle
+      .page-footer__nav.footer-nav
+        ul.footer-nav__list
+          li.footer-nav__item
+            a.footer-nav__link(href='#')
+              b
+                | Для поставщиков
+          li.footer-nav__item
+            a.footer-nav__link(href='#')
+              | Наши документы
+          li.footer-nav__item
+            a.footer-nav__link(href='#')
+              | О производстве
+          li.footer-nav__item
+            a.footer-nav__link(href='#')
+              | Экологические стандарты
+    .page-footer__column.page-footer__column--right
+      .page-footer__copyright.copyright
+        .copyright__logo
+          svg(width='108', height='39')
+            use(xlink:href='img/symbols.svg#logo-htmlacademy')
+        p.copyright__description
+          | Сделано в
+          |
+          a.copyright__description-link(href='https://htmlacademy.ru/intensive/htmlcss', target='_blank')
+            | HTML Academy
+          |
+          | &#169; 2017
