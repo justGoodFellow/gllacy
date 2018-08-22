@@ -2,21 +2,25 @@ extends ../layouts/base.pug
 
 block content
   main
+    h1.visually-hidden
+      | Магазин мороженного Глэйси
     section.slider
       .slider__container
+        h2.visually-hidden
+          | Два мороженых
         .slider__slides
           .slider__slide.slide
-            h2.slide__title
+            h3.slide__title
               | Крем-брюле и пломбир с малиновым джемом
             a.slide__link.btn(href='#')
               | Давайте оба!
           .slider__slide.slide
-            h2.slide__title
+            h3.slide__title
               | Шоколадный пломбир и лимонный сорбет
             a.slide__link.btn(href='#')
               | Давайте оба!
           .slider__slide.slide
-            h2.slide__title
+            h3.slide__title
               | Пломбир с помадкой и клубничный щербет
             a.slide__link.btn(href='#')
               | Давайте оба!
@@ -30,9 +34,110 @@ block content
             button.slider__controls-item(type='button')
               span
                 | 3
+    section.promotions.main__row
+      .main__container
+        h2.visually-hidden
+          | Акции
+        .main__column
+          .promotions__promotion.promotion
+            h3.promotion__title
+              | Малинка даром!
+            p.promotion__description
+              | При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+            a.promotion__link.btn(href='#')
+              | Хочу варенье!
+        .main__column
+          .promotions__promotion.promotion
+            h3.promotion__title
+              | Шоколадки даром!
+            p.promotion__description
+              | При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+            a.promotion__link.btn(href='#')
+              | Хочу шоколадки!
+    section.best-sellers
+      .best-sellers__container
+        h2.visually-hidden
+          | Популярное
+        .best-sellers__items
+          .best-sellers__item.product
+            .product__flag.product__flag--hit
+              span.visually-hidden
+                | Хит
+            .product__img-wrap
+              img(src='img/product-.jpg', width='267', height='267', alt='')
+            p.product__price.price
+              span.price__number
+                | 310
+              span.visually-hidden
+                |
+                | рублей
+              span.price__measure
+                | /кг
+            h3.product__title
+              a.product__link(href='#')
+                | Сливочное с апельсиновым джемом и цитрусовой стружкой
+            a.product__fast-look(href='#')
+              | Быстрый просмотр
+          .best-sellers__item.product
+            .product__flag.product__flag--hit
+              span.visually-hidden
+                | Хит
+            .product__img-wrap
+              img(src='img/product-.jpg', width='267', height='267', alt='')
+            p.product__price.price
+              span.price__number
+                | 380
+              span.visually-hidden
+                |
+                | рублей
+              span.price__measure
+                | /кг
+            h3.product__title
+              a.product__link(href='#')
+                | Сливочно-кофейное с кусочками шоколада
+            a.product__fast-look(href='#')
+              | Быстрый просмотр
+          .best-sellers__item.product
+            .product__flag.product__flag--hit
+              span.visually-hidden
+                | Хит
+            .product__img-wrap
+              img(src='img/product-.jpg', width='267', height='267', alt='')
+            p.product__price.price
+              span.price__number
+                | 355
+              span.visually-hidden
+                |
+                | рублей
+              span.price__measure
+                | /кг
+            h3.product__title
+              a.product__link(href='#')
+                | Сливочно-клубничное с присыпкой из белого шоколада
+            a.product__fast-look(href='#')
+              | Быстрый просмотр
+          .best-sellers__item.product
+            .product__flag.product__flag--hit
+              span.visually-hidden
+                | Хит
+            .product__img-wrap
+              img(src='img/product-.jpg', width='267', height='267', alt='')
+            p.product__price.price
+              span.price__number
+                | 415
+              span.visually-hidden
+                |
+                | рублей
+              span.price__measure
+                | /кг
+            h3.product__title
+              a.product__link(href='#')
+                | Сливочное крем-брюле с карамельной подливкой
+            a.product__fast-look(href='#')
+              | Быстрый просмотр
     section.info
       .info__container
-        h1.info__title
+        h2.info__title
           | Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
         .info__items
           p.info__item
@@ -43,11 +148,63 @@ block content
             | Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
           p.info__item
             | Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-    //- div
-      .div__container
-        div
-
-        div
-          p
-            | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-    //- section.map
+    .main__row
+      .main__container
+        .main__column
+          section.blog-news
+            h2.blog-news__title
+              | Новое в нашем блоге
+            h3.blog-news__news
+              a.blog-news__news-link(href='#')
+                | 10 способов сервировки фруктовых щербетов к столу
+          .main__column
+            section.subscription
+              h2.visually-hidden
+                | Подписка
+              p.subscription__description
+                | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+              form.subscription__form
+                input.subscription__field.field(type='email', placeholder='Электронная почта')
+                button.subscription__submit.btn(type='submit')
+                  | Отправить
+    section.contacts
+      h2.visually-hidden
+        | Контакты
+      .contacts__container
+        .contacts__content
+          address.contacts__address
+            p.contacts__content-row
+              | Адрес главного офиса и офлайн-магазина:
+              br
+              span.contacts__addr
+                | ул. Большая Конюшенная 19/8,
+                br
+                | Санкт-Петербург
+            p.contacts__content-row
+              | Для заказов по телефону:
+              br
+              a.contacts__phone(href='tel:88124502525')
+                | 8 812 450-25-25
+              br
+              | (с 10 до 20 ежедневно)
+          a.contacts__btn.btn(href='#')
+            | Форма обратной связи
+        section.contacts__feedback.feedback
+          h3.feedback__title
+            | Мы обязательно вам ответим!
+          form.feedback__form(action='#')
+            .feedback__items
+              .feedback__item
+                input.feedback__field.field(type='text', placeholder='Как вас зовут?')
+              .feedback__item
+                input.feedback__field.field(type='email', placeholder='Ваша почта для ответа?')
+              .feedback__item
+                textarea.feedback__field.field(placeholder='Напишите что-нибудь...')
+            button.feedback__send.btn(type='submit')
+              | Отправить
+          button.feedback__close(type='button')
+            | Закрыть
+        .modal__overlay
+      .contacts__map
+        .contacts__map-img-container
+          img(src='img/map.jpg', width='1200', height='430', alt='Карта')
