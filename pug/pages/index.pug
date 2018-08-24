@@ -1,6 +1,79 @@
 extends ../layouts/base.pug
 
 block content
+  header.page-header
+    .page-header__container
+      .page-header__row
+        a.page-header__logo
+          svg(width='154', height='64')
+            use(xlink:href='img/symbols.svg#logo')
+        nav.main-nav
+          ul.main-nav__items.main-nav__items--main
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Каталог
+              .main-nav__dropdown
+                ul.main-van__items.main-van__items--lvl2
+                  li.main-nav__item
+                    a.main-nav__link(href='#')
+                      | Новинки
+                ul.main-van__items.main-van__items--lvl2
+                  li.main-nav__item
+                    a.main-nav__link(href='catalog.html')
+                      | Сливочное
+                  li.main-nav__item
+                    a.main-nav__link(href='#')
+                      | Щербеты
+                  li.main-nav__item
+                    a.main-nav__link(href='#')
+                      | Фруктовый лед
+                  li.main-nav__item
+                    a.main-nav__link(href='#')
+                      | Мелорин
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Доставка и оплата
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | О Компании
+        .page-header__menu.header-menu
+          .header-menu__item
+            a.header-menu__link
+              svg(width='17', height='17')
+                use(xlink:href='img/symbols.svg#icon-loupe')
+              span.visually-hidden
+                | Поиск
+            form.header-menu__search
+              input.field(type='search', placeholder='Что ищем?')
+          .header-menu__item
+            a.header-menu__link
+              svg(width='21', height='19')
+                use(xlink:href='img/symbols.svg#icon-entrance')
+              | Вход
+            form.header-menu__login.login
+              input.field(type='email', placeholder='Электронная почта')
+              input.field(type='password', placeholder='Пароль')
+              .login__footer
+                button.btn(type='submit')
+                  | Войти
+                p.login__links
+                  a.login__link(href='#')
+                    | Забыли пароль?
+                  br
+                  a.login__link(href='#')
+                    | Новая регистрация
+          .header-menu__item
+            a.header-menu__link
+              svg(width='21', height='20')
+                use(xlink:href='img/symbols.svg#icon-basket')
+              span
+                | Пусто
+      .page-header__row
+        p.page-header__phone
+          | с 10 до 20, ежедневно
+          br
+          a.page-header__phone-number(href='tel:88124502525')
+            | 8 812 450-25-25
   main
     h1.visually-hidden
       | Магазин мороженного Глэйси

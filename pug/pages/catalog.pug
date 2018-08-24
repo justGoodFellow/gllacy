@@ -1,6 +1,128 @@
 extends ../layouts/base.pug
 
 block content
+  header.page-header
+    .page-header__container
+      .page-header__row
+        a.page-header__logo(href='index.html')
+          svg(width='154', height='64')
+            use(xlink:href='img/symbols.svg#logo')
+        nav.main-nav
+          ul.main-nav__items.main-nav__items--main
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Каталог
+              .main-nav__dropdown
+                ul.main-van__items.main-van__items--lvl2
+                  li.main-nav__item
+                    a.main-nav__link(href='#')
+                      | Новинки
+                ul.main-van__items.main-van__items--lvl2
+                  li.main-nav__item
+                    a.main-nav__link
+                      | Сливочное
+                  li.main-nav__item
+                    a.main-nav__link(href='#')
+                      | Щербеты
+                  li.main-nav__item
+                    a.main-nav__link(href='#')
+                      | Фруктовый лед
+                  li.main-nav__item
+                    a.main-nav__link(href='#')
+                      | Мелорин
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Доставка и оплата
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | О Компании
+        .page-header__menu.header-menu
+          .header-menu__item
+            a.header-menu__link
+              svg(width='17', height='17')
+                use(xlink:href='img/symbols.svg#icon-loupe')
+              span.visually-hidden
+                | Поиск
+            form.header-menu__search
+              input.field(type='search', placeholder='Что ищем?')
+          .header-menu__item
+            a.header-menu__link
+              svg(width='21', height='19')
+                use(xlink:href='img/symbols.svg#icon-entrance')
+              | Вход
+            form.header-menu__login.login
+              input.field(type='email', placeholder='Электронная почта')
+              input.field(type='password', placeholder='Пароль')
+              .login__footer
+                button.btn(type='submit')
+                  | Войти
+                p.login__links
+                  a.login__link(href='#')
+                    | Забыли пароль?
+                  br
+                  a.login__link(href='#')
+                    | Новая регистрация
+          .header-menu__item
+            a.header-menu__link(href='#')
+              svg(width='21', height='20')
+                use(xlink:href='img/symbols.svg#icon-basket')
+              span
+                | 2
+                |
+              span
+                | товара
+            .header-menu__basket
+              table
+                tbody
+                  tr
+                    td
+                      button(type='button')
+                        span.visually-hidden
+                          | Убрать
+                    td
+                      img(src='img/product-.jpg', width='33', height='33', alt='')
+                    td
+                      | Пломбир с апельсиновым джемом
+                    td
+                      | 1,5 кг х
+                      |
+                      span
+                        | 200 руб.
+                    td
+                      | 300 руб.
+                  tr
+                    td
+                      button(type='button')
+                        span.visually-hidden
+                          | Убрать
+                    td
+                      img(src='img/product-.jpg', width='33', height='33', alt='')
+                    td
+                      | Клубничный пломбир с присыпкой из белого шоколада
+                    td
+                      | 1,5 кг х
+                      |
+                      span
+                        | 300 руб.
+                    td
+                      | 450 руб.
+                tfoot
+                  tr
+                    td
+                      | Итого:
+                      |
+                      span
+                        | 750
+                      |
+                      | руб.
+              a.btn(href='#')
+                | Оформить заказ
+      .page-header__row
+        p.page-header__phone
+          | с 10 до 20, ежедневно
+          br
+          a.page-header__phone-number(href='tel:88124502525')
+            | 8 812 450-25-25
   .catalog
     .catalog__container
       nav.page-nav
@@ -17,29 +139,39 @@ block content
         | Сливочное мороженое
       form.catalog__form
         .catalog__form-row
-          //- fieldset.catalog__filters-group
-            legend
-              h3.catalog__filters-title
-                | Стоимость
-            .catalog__filters-cost.range-filter
-              .range-filter__range-controls
-                .range-filter__scale
-                  .range-filter__bar(style='width: 65%;')
-                  .range-filter__toggle.range-filter__min-toggle
-                  .range-filter__toggle.range-filter__max-toggle
-              .range-filter__price-controls
-                .range-filter__price.range-filter__min-price
-                  label(for='from')
-                    | От
-                  input(id='from', type='text', value='0')
-                .range-filter__price.range-filter__max-price
-                  label(for='to')
-                    | До
-                  input(id='to', type='text', value='5000')
           fieldset.catalog__filters-group
             legend
               h3.catalog__filters-title
-                | Жирность
+                | Сортировка:
+            select
+              option
+                | по популярности
+              option
+                | сначала недорогие
+              option
+                | сначала дорогие
+              option
+                | по жирности
+          fieldset.catalog__filters-group
+            legend
+              h3.catalog__filters-title
+                | Цена:
+            span.range-filter__price-controls
+              input(type='text', value='100')
+              |
+              | руб. -
+              input(type='text', value='500')
+              |
+              | руб.
+            .range-filter__range-controls
+              .range-filter__scale
+                .range-filter__bar(style='width: 65%;')
+                .range-filter__toggle.range-filter__min-toggle
+                .range-filter__toggle.range-filter__max-toggle
+          fieldset.catalog__filters-group
+            legend
+              h3.catalog__filters-title
+                | Жирность:
             div
               .radiobox
                 input.radiobox__input(type='radio', id='zero', name='fat-content', checked)
@@ -65,7 +197,7 @@ block content
           fieldset.catalog__filters-group
             legend
               h3.catalog__filters-title
-                | Наполнители
+                | Наполнители:
             div
               .checkbox
                 input.checkbox__input(type='checkbox', id='chocolate', checked)
