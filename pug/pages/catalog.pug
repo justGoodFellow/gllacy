@@ -4,8 +4,8 @@ block content
   header.page-header
     .page-header__container
       .page-header__row
-        a.page-header__logo(href='index.html')
-          svg(width='154', height='64')
+        a.page-header__logo(href='index.html', aria-label='Главная страница')
+          svg(width='154', height='64', aria-label='Логотип Глейси')
             use(xlink:href='img/symbols.svg#logo')
         nav.main-nav
           ul.main-nav__items.main-nav__items--main
@@ -38,21 +38,30 @@ block content
                 | О Компании
         .page-header__menu.header-menu
           .header-menu__item
-            a.header-menu__link
+            a.header-menu__link(href='#')
               svg(width='17', height='17')
                 use(xlink:href='img/symbols.svg#icon-loupe')
               span.visually-hidden
                 | Поиск
-            form.header-menu__search
-              input.field(type='search', placeholder='Что ищем?')
+            form.header-menu__search(action='#', method='post')
+              label
+                span.visually-hidden
+                  | Поле поиска
+                input.field(type='search', placeholder='Что ищем?')
           .header-menu__item
-            a.header-menu__link
+            a.header-menu__link(href='#')
               svg(width='21', height='19')
                 use(xlink:href='img/symbols.svg#icon-entrance')
               | Вход
-            form.header-menu__login.login
-              input.field(type='email', placeholder='Электронная почта')
-              input.field(type='password', placeholder='Пароль')
+            form.header-menu__login.login(action='#', method='post')
+              label
+                span.visually-hidden
+                  | Электронная почта
+                input.field(type='email', placeholder='Электронная почта')
+              label
+                span.visually-hidden
+                  | Пароль
+                input.field(type='password', placeholder='Пароль')
               .login__footer
                 button.btn(type='submit')
                   | Войти
@@ -137,12 +146,11 @@ block content
             | Сливочное
       h1.catalog__title
         | Сливочное мороженое
-      form.catalog__form
+      form.catalog__form(action='#', method='get')
         .catalog__form-row
           fieldset.catalog__filters-group
-            legend
-              h3.catalog__filters-title
-                | Сортировка:
+            legend.catalog__filters-title
+              | Сортировка:
             select
               option
                 | по популярности
@@ -153,14 +161,19 @@ block content
               option
                 | по жирности
           fieldset.catalog__filters-group
-            legend
-              h3.catalog__filters-title
-                | Цена:
+            legend.catalog__filters-title
+              | Цена:
             span.range-filter__price-controls
-              input(type='text', value='100')
+              label
+                span.visually-hidden
+                  | От
+                input(type='text', value='100')
               |
               | руб. -
-              input(type='text', value='500')
+              label
+                span.visually-hidden
+                  | До
+                input(type='text', value='500')
               |
               | руб.
             .range-filter__range-controls
@@ -169,9 +182,8 @@ block content
                 .range-filter__toggle.range-filter__min-toggle
                 .range-filter__toggle.range-filter__max-toggle
           fieldset.catalog__filters-group
-            legend
-              h3.catalog__filters-title
-                | Жирность:
+            legend.catalog__filters-title
+              | Жирность:
             div
               .radiobox
                 input.radiobox__input(type='radio', id='zero', name='fat-content', checked)
@@ -195,9 +207,8 @@ block content
                     | Выше 30%
         .catalog__form-row
           fieldset.catalog__filters-group
-            legend
-              h3.catalog__filters-title
-                | Наполнители:
+            legend.catalog__filters-title
+              | Наполнители:
             div
               .checkbox
                 input.checkbox__input(type='checkbox', id='chocolate', checked)
@@ -233,7 +244,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочное с апельсиновым джемом и цитрусовой стружкой
           a.product__fast-look(href='#')
@@ -249,7 +260,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочно-кофейное с кусочками шоколада
           a.product__fast-look(href='#')
@@ -265,7 +276,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочно-клубничное с присыпкой из белого шоколада
           a.product__fast-look(href='#')
@@ -281,7 +292,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочное крем-брюле с карамельной подливкой
           a.product__fast-look(href='#')
@@ -297,7 +308,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочное с брусничным джемом
           a.product__fast-look(href='#')
@@ -313,7 +324,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочно-черничное с цельными ягодами черники
           a.product__fast-look(href='#')
@@ -329,7 +340,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочно-лимонное с карамельной присыпкой
           a.product__fast-look(href='#')
@@ -345,7 +356,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочное с шоколадной стружкой
           a.product__fast-look(href='#')
@@ -361,7 +372,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочно-ванильное с кусочками шоколада
           a.product__fast-look(href='#')
@@ -377,7 +388,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочноe с ментоловым сиропом
           a.product__fast-look(href='#')
@@ -393,7 +404,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочное с кусочками черного шоколада
           a.product__fast-look(href='#')
@@ -409,7 +420,7 @@ block content
               | рублей
             span.price__measure
               | /кг
-          h3.product__title
+          h2.product__title
             a.product__link(href='#')
               | Сливочное с мятным сиропом
           a.product__fast-look(href='#')

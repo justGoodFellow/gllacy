@@ -5,7 +5,7 @@ block content
     .page-header__container
       .page-header__row
         a.page-header__logo
-          svg(width='154', height='64')
+          svg(width='154', height='64', aria-label='Логотип Глейси')
             use(xlink:href='img/symbols.svg#logo')
         nav.main-nav
           ul.main-nav__items.main-nav__items--main
@@ -38,21 +38,30 @@ block content
                 | О Компании
         .page-header__menu.header-menu
           .header-menu__item
-            a.header-menu__link
+            a.header-menu__link(href='#')
               svg(width='17', height='17')
                 use(xlink:href='img/symbols.svg#icon-loupe')
               span.visually-hidden
                 | Поиск
-            form.header-menu__search
-              input.field(type='search', placeholder='Что ищем?')
+            form.header-menu__search(action='#', method='post')
+              label
+                span.visually-hidden
+                  | Поле поиска
+                input.field(type='search', placeholder='Что ищем?')
           .header-menu__item
-            a.header-menu__link
+            a.header-menu__link(href='#')
               svg(width='21', height='19')
                 use(xlink:href='img/symbols.svg#icon-entrance')
               | Вход
-            form.header-menu__login.login
-              input.field(type='email', placeholder='Электронная почта')
-              input.field(type='password', placeholder='Пароль')
+            form.header-menu__login.login(action='#', method='post')
+              label
+                span.visually-hidden
+                  | Электронная почта
+                input.field(type='email', placeholder='Электронная почта')
+              label
+                span.visually-hidden
+                  | Пароль
+                input.field(type='password', placeholder='Пароль')
               .login__footer
                 button.btn(type='submit')
                   | Войти
@@ -63,7 +72,7 @@ block content
                   a.login__link(href='#')
                     | Новая регистрация
           .header-menu__item
-            a.header-menu__link
+            a.header-menu__link(href='#')
               svg(width='21', height='20')
                 use(xlink:href='img/symbols.svg#icon-basket')
               span
@@ -236,8 +245,11 @@ block content
                 | Подписка
               p.subscription__description
                 | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-              form.subscription__form
-                input.subscription__field.field(type='email', placeholder='Электронная почта')
+              form.subscription__form(action='#', method='post')
+                label
+                  span.visually-hidden
+                    | Электронная почта
+                  input.subscription__field.field(type='email', placeholder='Электронная почта')
                 button.subscription__submit.btn(type='submit')
                   | Отправить
     section.contacts
@@ -265,14 +277,23 @@ block content
         section.contacts__feedback.feedback
           h3.feedback__title
             | Мы обязательно вам ответим!
-          form.feedback__form(action='#')
+          form.feedback__form(action='#', method='post')
             .feedback__items
               .feedback__item
-                input.feedback__field.field(type='text', placeholder='Как вас зовут?')
+                label
+                  span.visually-hidden
+                    | Имя
+                  input.feedback__field.field(type='text', placeholder='Как вас зовут?')
               .feedback__item
-                input.feedback__field.field(type='email', placeholder='Ваша почта для ответа?')
+                label
+                  span.visually-hidden
+                    | Электронная почта
+                  input.feedback__field.field(type='email', placeholder='Ваша почта для ответа?')
               .feedback__item
-                textarea.feedback__field.field(placeholder='Напишите что-нибудь...')
+                label
+                  span.visually-hidden
+                    | Поле для текста
+                  textarea.feedback__field.field(placeholder='Напишите что-нибудь...')
             button.feedback__send.btn(type='submit')
               | Отправить
           button.feedback__close(type='button')
@@ -280,4 +301,4 @@ block content
         .modal__overlay
       .contacts__map
         .contacts__map-img-container
-          img(src='img/map.jpg', width='1200', height='430', alt='Карта')
+          img(src='img/map.jpg', width='1200', height='430', alt='Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург')

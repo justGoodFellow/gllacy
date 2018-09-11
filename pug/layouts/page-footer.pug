@@ -4,19 +4,19 @@ footer.page-footer
       ul.social-links
         li.social-links__item
           a.social-links__link.social-links__link--tw(href='#', target='_blank')
-            span
+            span.visually-hidden
               | Твиттер
         li.social-links__item
           a.social-links__link.social-links__link--in(href='#', target='_blank')
-            span
+            span.visually-hidden
               | Инстаграмм
         li.social-links__item
           a.social-links__link.social-links__link--fb(href='#', target='_blank')
-            span
+            span.visually-hidden
               | Фейсбук
         li.social-links__item
           a.social-links__link.social-links__link--vk(href='#', target='_blank')
-            span
+            span.visually-hidden
               | Вконтакте
     .page-footer__column.page-footer__column--middle
       .page-footer__nav.footer-nav
@@ -37,7 +37,7 @@ footer.page-footer
     .page-footer__column.page-footer__column--right
       .page-footer__copyright.copyright
         .copyright__logo
-          svg(width='108', height='39')
+          svg(width='108', height='39', aria-label='Логотип HTML Academy')
             use(xlink:href='img/symbols.svg#logo-htmlacademy')
         p.copyright__description
           | Сделано в
