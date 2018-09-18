@@ -1,0 +1,21 @@
+.page-footer {
+  font-size: 13px;
+}
+
+.social-links {
+  @include list-reset;
+}
+
+.footer-nav__list {
+  @include list-reset;
+}
+
+.copyright {
+  font-size: 12px;
+}
+
+.copyright__logo {
+  svg {
+    fill: white;
+  }
+}

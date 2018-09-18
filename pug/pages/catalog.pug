@@ -4,7 +4,7 @@ block content
   header.page-header
     .page-header__container
       .page-header__row
-        a.page-header__logo(href='index.html', aria-label='Главная страница')
+        a.page-header__logo.logo(href='index.html', aria-label='Главная страница')
           svg(width='154', height='64', aria-label='Логотип Глейси')
             use(xlink:href='img/symbols.svg#logo')
         nav.main-nav
@@ -13,11 +13,11 @@ block content
               a.main-nav__link(href='#')
                 | Каталог
               .main-nav__dropdown
-                ul.main-van__items.main-van__items--lvl2
+                ul.main-nav__items.main-nav__items--lvl2
                   li.main-nav__item
                     a.main-nav__link(href='#')
                       | Новинки
-                ul.main-van__items.main-van__items--lvl2
+                ul.main-nav__items.main-nav__items--lvl2
                   li.main-nav__item
                     a.main-nav__link
                       | Сливочное
@@ -247,7 +247,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочное с апельсиновым джемом и цитрусовой стружкой
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -263,7 +263,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочно-кофейное с кусочками шоколада
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -279,7 +279,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочно-клубничное с присыпкой из белого шоколада
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -295,7 +295,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочное крем-брюле с карамельной подливкой
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -311,7 +311,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочное с брусничным джемом
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -327,7 +327,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочно-черничное с цельными ягодами черники
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -343,7 +343,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочно-лимонное с карамельной присыпкой
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -359,7 +359,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочное с шоколадной стружкой
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -375,7 +375,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочно-ванильное с кусочками шоколада
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -391,7 +391,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочноe с ментоловым сиропом
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -407,7 +407,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочное с кусочками черного шоколада
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
         .product
           .product__img-wrap
@@ -423,7 +423,7 @@ block content
           h2.product__title
             a.product__link(href='#')
               | Сливочное с мятным сиропом
-          a.product__fast-look(href='#')
+          a.product__fast-look.btn(href='#')
             | Быстрый просмотр
       .catalog__nav.catalog-nav
         button.catalog-nav__arrow.catalog-nav__arrow--prev(type='button', disabled)
