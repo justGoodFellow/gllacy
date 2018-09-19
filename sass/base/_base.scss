@@ -7,6 +7,17 @@ body {
   background-color: gray;
 }
 
+a {
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: $color-red--light;
+
+    outline: none;
+  }
+}
+
 // .visually-hidden {
 //   @include visually-hidden;
 // }

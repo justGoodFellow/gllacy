@@ -2,15 +2,41 @@
   @include list-reset;
 }
 
-.main-nav__link {
-  font-weight: 500;
-  color: inherit;
+.main-nav__items--main {
+  & > li {
+    & > .main-nav__link {
+      font-weight: 500;
+
+      &:hover,
+      &:focus {
+        color: $gray--dark;
+        text-decoration: none;
+
+        background-color: $gray--light;
+      }
+    }
+  }
 }
 
 .main-nav__items--lvl2 {
   .main-nav__link {
-    font-weight: 400;
     font-size: 14px;
-    color: black;
+    color: $gray--dark;
+    text-decoration: none;
+
+    &[href] {
+      &:hover,
+      &:focus {
+        background-color: #fbded7;
+      }
+
+      &:active {
+        background-color: #f6b5a5;
+      }
+    }
+
+    &:not([href]) {
+      background-color: #d07058;
+    }
   }
 }

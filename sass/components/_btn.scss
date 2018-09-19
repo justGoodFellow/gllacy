@@ -3,9 +3,15 @@
   font-weight: 700;
   font-size: 18px;
   color: white;
+  text-decoration: none;
 
   background: none;
-  background-color: red;
+  background-color: $color-red;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: white;
+  }
 }
