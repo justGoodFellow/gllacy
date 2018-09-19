@@ -1,3 +1,13 @@
+.promotion {
+  &--raspberries {
+    background-color: #c12244;
+  }
+
+  &--chocolate {
+    background-color: #392013;
+  }
+}
+
 .promotion__title {
   font-size: 35px;
 }

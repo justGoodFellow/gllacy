@@ -15,6 +15,13 @@
   }
 }
 
+.contacts__phone {
+  &:hover,
+  &:focus {
+    color: $color-red;
+  }
+}
+
 .feedback {
   color: $gray--dark;
 

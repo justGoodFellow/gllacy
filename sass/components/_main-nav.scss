@@ -36,7 +36,13 @@
     }
 
     &:not([href]) {
+      color: white;
+
       background-color: #d07058;
     }
   }
+}
+
+.main-nav__items--lvl2-top {
+  font-weight: 700;
 }
