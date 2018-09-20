@@ -18,6 +18,12 @@ a {
   }
 }
 
+button {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 // .visually-hidden {
 //   @include visually-hidden;
 // }
