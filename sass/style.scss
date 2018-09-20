@@ -6,9 +6,6 @@
 @import 'base/fonts.scss';
 @import 'base/base.scss';
 //
-@import 'layouts/page-header.scss';
-@import 'layouts/page-footer.scss';
-//
 @import 'components/btn.scss';
 @import 'components/field.scss';
 @import 'components/logo.scss';
@@ -21,3 +18,8 @@
 @import 'components/blog-news.scss';
 @import 'components/subscription.scss';
 @import 'components/contacts.scss';
+//
+@import 'layouts/page-header.scss';
+@import 'layouts/page-footer.scss';
+//
+@import 'pages/catalog.scss';

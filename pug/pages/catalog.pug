@@ -89,13 +89,13 @@ block content
                         span.visually-hidden
                           | Убрать
                     td
-                      img(src='img/product-.jpg', width='33', height='33', alt='')
+                      img(src='img/product-1.jpg', width='33', height='33', alt='')
                     td
                       | Пломбир с апельсиновым джемом
                     td
                       | 1,5 кг х
                       |
-                      span
+                      span.header-menu__basket-price
                         | 200 руб.
                     td
                       | 300 руб.
@@ -105,13 +105,13 @@ block content
                         span.visually-hidden
                           | Убрать
                     td
-                      img(src='img/product-.jpg', width='33', height='33', alt='')
+                      img(src='img/product-3.jpg', width='33', height='33', alt='')
                     td
                       | Клубничный пломбир с присыпкой из белого шоколада
                     td
                       | 1,5 кг х
                       |
-                      span
+                      span.header-menu__basket-price
                         | 300 руб.
                     td
                       | 450 руб.
@@ -151,15 +151,16 @@ block content
           fieldset.catalog__filters-group
             legend.catalog__filters-title
               | Сортировка:
-            select
-              option
-                | по популярности
-              option
-                | сначала недорогие
-              option
-                | сначала дорогие
-              option
-                | по жирности
+            .catalog__filters-inner
+              select
+                option
+                  | по популярности
+                option
+                  | сначала недорогие
+                option
+                  | сначала дорогие
+                option
+                  | по жирности
           fieldset.catalog__filters-group
             legend.catalog__filters-title
               | Цена:
@@ -176,15 +177,16 @@ block content
                 input(type='text', value='500')
               |
               | руб.
-            .range-filter__range-controls
-              .range-filter__scale
-                .range-filter__bar(style='width: 65%;')
-                .range-filter__toggle.range-filter__min-toggle
-                .range-filter__toggle.range-filter__max-toggle
+            .catalog__filters-inner
+              .range-filter__range-controls
+                .range-filter__scale
+                  .range-filter__bar(style='width: 65%;')
+                  .range-filter__toggle.range-filter__min-toggle
+                  .range-filter__toggle.range-filter__max-toggle
           fieldset.catalog__filters-group
             legend.catalog__filters-title
               | Жирность:
-            div
+            .catalog__filters-inner
               .radiobox
                 input.radiobox__input(type='radio', id='zero', name='fat-content', checked)
                 label.radiobox__label(for='zero')
@@ -209,7 +211,7 @@ block content
           fieldset.catalog__filters-group
             legend.catalog__filters-title
               | Наполнители:
-            div
+            .catalog__filters-inner
               .checkbox
                 input.checkbox__input(type='checkbox', id='chocolate', checked)
                 label.checkbox__label(for='chocolate')
@@ -230,7 +232,7 @@ block content
                 input.checkbox__input(type='checkbox', id='jams')
                 label.checkbox__label(for='jams')
                   | джемы
-          button(type='submit')
+          button.catalog__filters-submit(type='submit')
             | Применить
       .catalog__items
         .product

@@ -1,5 +1,6 @@
 .header-menu__link {
   font-weight: 500;
+  font-size: 14px;
   text-decoration: none;
 
   // border-radius: 50%;
@@ -27,4 +28,29 @@
   &:focus {
     color: $color-red;
   }
+}
+
+.header-menu__basket {
+  table {
+    color: $gray--dark;
+  }
+
+  tbody {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  tfoot {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: right;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.header-menu__basket-price {
+  color: #999999;
 }

@@ -1,0 +1,42 @@
+.page-nav__list {
+  @include list-reset;
+
+  font-size: 14px;
+}
+
+.catalog__title {
+  font-size: 35px;
+}
+
+.catalog__form {
+  font-weight: 500;
+}
+
+.catalog__filters-group {
+  border: none;
+}
+
+.catalog__filters-title {
+  font-size: 14px;
+}
+
+.catalog__filters-inner {
+  background-color: rgba(white, 0.2);
+}
+
+.catalog__filters-submit {
+  font-weight: 500;
+  color: white;
+
+  background-color: rgba(white, 0.2);
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $gray--dark;
+
+    background-color: white;
+    outline: none;
+  }
+}
