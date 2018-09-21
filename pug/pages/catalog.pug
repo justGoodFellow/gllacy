@@ -2,8 +2,8 @@ extends ../layouts/base.pug
 
 block content
   header.page-header
-    .page-header__container
-      .page-header__row
+    .page-header__wrapper
+      .page-header__row.page-header__row--top
         a.page-header__logo.logo(href='index.html', aria-label='Главная страница')
           svg(width='154', height='64', aria-label='Логотип Глейси')
             use(xlink:href='img/symbols.svg#logo')
@@ -124,16 +124,16 @@ block content
                         | 750
                       |
                       | руб.
-              a.btn(href='#')
+              a.header-menu__basket-submit.btn(href='#')
                 | Оформить заказ
-      .page-header__row
+      .page-header__row.page-header__row--bottom
         p.page-header__phone
           | с 10 до 20, ежедневно
           br
           a.page-header__phone-number(href='tel:88124502525')
             | 8 812 450-25-25
   .catalog
-    .catalog__container
+    .catalog__wrapper
       nav.page-nav
         ul.page-nav__list
           li.page-nav__item

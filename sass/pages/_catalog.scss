@@ -1,3 +1,7 @@
+.catalog__wrapper {
+  @include wrapper;
+}
+
 .page-nav__list {
   @include list-reset;
 
@@ -10,6 +14,11 @@
 
 .catalog__form {
   font-weight: 500;
+}
+
+.catalog__form-row {
+  display: flex;
+  align-items: center;
 }
 
 .catalog__filters-group {
@@ -47,7 +56,15 @@
   }
 }
 
+.catalog__items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .catalog-nav {
+  display: flex;
+  justify-content: flex-end;
+
   button {
     background: none;
     border: none;

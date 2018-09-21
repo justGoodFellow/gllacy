@@ -1,4 +1,14 @@
 .product {
+  width: 23.25%;
+  margin-right: 2.32%;
+  margin-bottom: 40px;
+
+  border-radius: 5px;
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
   &:hover {
     background-color: rgba(white, 0.2);
     box-shadow: 0 20px 20px rgba(black, 0.4);
@@ -19,6 +29,10 @@
 
 .price__number {
   font-size: 45px;
+}
+
+.product__title {
+  text-align: center;
 }
 
 .product__link {

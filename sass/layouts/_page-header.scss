@@ -1,4 +1,25 @@
+.page-header__wrapper {
+  @include wrapper;
+}
+
+.page-header__row {
+  &--top {
+    display: flex;
+    align-items: center;
+  }
+
+  &--bottom {
+    text-align: right;
+  }
+}
+
+.page-header__menu {
+  margin-left: auto;
+}
+
 .page-header__dropdown-menu {
+  // display: none;
+
   color: $gray--dark;
 
   background-color: $gray--light;

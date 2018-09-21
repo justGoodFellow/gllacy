@@ -1,5 +1,29 @@
 .page-footer {
+  padding: 20px 0;
+
   font-size: 13px;
+}
+
+.page-footer__wrapper {
+  @include wrapper;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-footer__column {
+  display: flex;
+  width: 23.26%;
+
+  &--middle {
+    width: 48.78%;
+    justify-content: center;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
 }
 
 .social-links {
