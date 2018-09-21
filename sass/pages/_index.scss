@@ -1,0 +1,18 @@
+.main__wrapper {
+  @include wrapper;
+}
+
+.main__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__column {
+  width: 48.83%;
+
+  & > * {
+    height: 100%;
+
+    border-radius: 15px;
+  }
+}

@@ -1,9 +1,16 @@
+.contacts__wrapper {
+  @include wrapper;
+}
+
 .contacts__content {
+  width: 300px;
+
   font-size: 14px;
   line-height: 20px;
   color: $gray--dark;
 
   background-color: white;
+  border-radius: 15px;
 }
 
 .contacts__address {
@@ -23,11 +30,20 @@
 }
 
 .feedback {
+  width: 477px;
+
   color: $gray--dark;
 
   background-color: $gray--light;
+  border-radius: 15px;
 }
 
 .feedback__title {
   font-size: 24px;
+}
+
+.contacts__map-img-wrap {
+  min-width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
