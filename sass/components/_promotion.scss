@@ -1,4 +1,8 @@
 .promotion {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
   &--raspberries {
     background-color: #c12244;
   }
@@ -16,4 +20,9 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+}
+
+.promotion__link {
+  margin-top: auto;
+  margin-left: auto;
 }
