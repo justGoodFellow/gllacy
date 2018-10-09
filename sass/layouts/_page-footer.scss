@@ -8,8 +8,8 @@
   @include wrapper;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .page-footer__column {
@@ -17,8 +17,8 @@
   width: 23.26%;
 
   &--middle {
-    width: 48.78%;
     justify-content: center;
+    width: 48.78%;
   }
 
   &--right {
