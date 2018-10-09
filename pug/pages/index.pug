@@ -38,7 +38,7 @@ block content
                 | О Компании
         .page-header__menu.header-menu
           .header-menu__item
-            a.page-header__dropdown-toggle.header-menu__link(href='#')
+            a.page-header__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
               svg(width='17', height='17')
                 use(xlink:href='img/symbols.svg#icon-loupe')
               span.visually-hidden
@@ -53,24 +53,25 @@ block content
               svg(width='21', height='19')
                 use(xlink:href='img/symbols.svg#icon-entrance')
               | Вход
-            form.page-header__dropdown-menu.header-menu__login.login(action='#', method='post')
-              label
-                span.visually-hidden
-                  | Электронная почта
-                input.field(type='email', placeholder='Электронная почта')
-              label
-                span.visually-hidden
-                  | Пароль
-                input.field(type='password', placeholder='Пароль')
-              .login__footer
-                button.btn(type='submit')
-                  | Войти
-                p.login__links
-                  a.login__link(href='#')
-                    | Забыли пароль?
-                  br
-                  a.login__link(href='#')
-                    | Новая регистрация
+            .page-header__dropdown-menu(action='#', method='post')
+              form.header-menu__login.login(action='#', method='post')
+                label
+                  span.visually-hidden
+                    | Электронная почта
+                  input.field(type='email', placeholder='Электронная почта')
+                label
+                  span.visually-hidden
+                    | Пароль
+                  input.field(type='password', placeholder='Пароль')
+                .login__footer
+                  button.btn(type='submit')
+                    | Войти
+                  p.login__links
+                    a.login__link(href='#')
+                      | Забыли пароль?
+                    br
+                    a.login__link(href='#')
+                      | Новая регистрация
           .header-menu__item
             a.header-menu__link(href='#')
               svg(width='21', height='20')

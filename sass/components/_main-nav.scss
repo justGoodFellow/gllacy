@@ -5,7 +5,16 @@
 .main-nav__items--main {
   & > li {
     & > .main-nav__link {
+      display: inline-block;
+      margin-right: 40px;
+      padding: 0 15px;
+
       font-weight: 500;
+      line-height: 32px;
+      vertical-align: top;
+      text-decoration: none;
+
+      border-radius: 30px;
 
       &:hover,
       &:focus {
@@ -47,4 +56,8 @@
 
 .main-nav__items--lvl2-top {
   font-weight: 700;
+}
+
+.page-header__dropdown-menu {
+  display: none;
 }
