@@ -40,13 +40,29 @@
   }
 
   &--search {
+    justify-content: center;
     width: 32px;
     padding: 0;
-    justify-content: center;
     svg {
       margin: 0;
     }
   }
+}
+
+.header-menu__search {
+  padding: 20px 15px;
+}
+
+.header-menu__login {
+  box-sizing: border-box;
+  width: 280px;
+  padding: 20px;
+}
+
+.header-menu__login-field {
+  margin-bottom: 20px;
+
+  font-size: 14px;
 }
 
 .login {

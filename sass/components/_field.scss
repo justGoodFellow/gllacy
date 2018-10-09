@@ -1,5 +1,8 @@
 .field {
-  font-weight: 700;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+
   color: $gray--dark;
 
   border: none;

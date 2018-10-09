@@ -31,7 +31,11 @@
   flex-direction: column;
 
   .main-nav__link {
+    display: block;
+    padding: 0 20px;
+
     font-size: 14px;
+    vertical-align: top;
     color: $gray--dark;
     text-decoration: none;
 
@@ -59,5 +63,8 @@
 }
 
 .page-header__dropdown-menu {
-  display: none;
+  position: absolute;
+
+  border-radius: 3px;
+  // display: none;
 }
