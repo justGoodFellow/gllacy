@@ -9,10 +9,10 @@ block content
             use(xlink:href='img/symbols.svg#logo')
         nav.main-nav
           ul.main-nav__items.main-nav__items--main
-            li.main-nav__item
+            li.main-nav__item.main-nav__item--dropdown
               a.page-header__dropdown-toggle.main-nav__link(href='#')
                 | Каталог
-              .page-header__dropdown-menu.main-nav__dropdown
+              .header-menu__dropdown-menu
                 ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
                   li.main-nav__item
                     a.main-nav__link(href='#')
@@ -37,23 +37,23 @@ block content
               a.main-nav__link(href='#')
                 | О Компании
         .page-header__menu.header-menu
-          .header-menu__item
+          .header-menu__dropdown
             a.page-header__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
               svg(width='17', height='17')
                 use(xlink:href='img/symbols.svg#icon-loupe')
               span.visually-hidden
                 | Поиск
-            form.page-header__dropdown-menu.header-menu__search(action='#', method='post')
+            form.header-menu__dropdown-menu.header-menu__search(action='#', method='post')
               label
                 span.visually-hidden
                   | Поле поиска
                 input.field(type='search', placeholder='Что ищем?')
-          .header-menu__item
+          .header-menu__dropdown
             a.page-header__dropdown-toggle.header-menu__link(href='#')
               svg(width='21', height='19')
                 use(xlink:href='img/symbols.svg#icon-entrance')
               | Вход
-            .page-header__dropdown-menu(action='#', method='post')
+            .header-menu__dropdown-menu
               form.header-menu__login.login(action='#', method='post')
                 label
                   span.visually-hidden
@@ -72,7 +72,7 @@ block content
                     br
                     a.login__link(href='#')
                       | Новая регистрация
-          .header-menu__item
+          .header-menu__dropdown
             a.header-menu__link(href='#')
               svg(width='21', height='20')
                 use(xlink:href='img/symbols.svg#icon-basket')

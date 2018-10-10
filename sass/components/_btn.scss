@@ -1,14 +1,23 @@
 .btn {
+  display: inline-block;
+  padding: 0 25px;
+
   font: inherit;
   font-weight: 700;
   font-size: 18px;
+  line-height: 45px;
   color: white;
   text-decoration: none;
+  text-shadow: 0 2px 5px rgba(#a0200b, 0.76);
 
   background: none;
   background-color: $color-red;
+  background-image: linear-gradient(90deg, #e74a35 0%, #f26843 100%);
   border: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 2px 0 rgba(#ac1000, 0.64);
   cursor: pointer;
+
 
   &:hover,
   &:focus {

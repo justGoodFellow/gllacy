@@ -1,5 +1,16 @@
 .header-menu {
+  position: relative;
+
   display: flex;
+}
+
+.header-menu__dropdown {
+  position: relative;
+}
+
+.header-menu__dropdown-menu {
+  position: absolute;
+  right: 0;
 }
 
 .header-menu__item {
@@ -51,9 +62,12 @@
 
 .header-menu__search {
   padding: 20px 15px;
+  width: 345px;
+  box-sizing: border-box;
 }
 
 .header-menu__login {
+  display: none;
   box-sizing: border-box;
   width: 280px;
   padding: 20px;
@@ -66,7 +80,7 @@
 }
 
 .login {
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
