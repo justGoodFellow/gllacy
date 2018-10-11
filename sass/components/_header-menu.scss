@@ -11,9 +11,15 @@
 .header-menu__dropdown-menu {
   position: absolute;
   right: 0;
+
+  color: $gray--dark;
+
+  background-color: $gray--light;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(black, 0.4);
 }
 
-.header-menu__item {
+.header-menu__dropdown {
   margin-left: 10px;
 }
 
@@ -61,13 +67,13 @@
 }
 
 .header-menu__search {
-  padding: 20px 15px;
-  width: 345px;
+  display: none;
   box-sizing: border-box;
+  width: 345px;
+  padding: 20px 15px;
 }
 
 .header-menu__login {
-  display: none;
   box-sizing: border-box;
   width: 280px;
   padding: 20px;
@@ -80,12 +86,13 @@
 }
 
 .login {
-  display: none;
+  display: flex;
   flex-direction: column;
 }
 
 .login__footer {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
