@@ -9,8 +9,8 @@ block content
             use(xlink:href='img/symbols.svg#logo')
         nav.main-nav
           ul.main-nav__items.main-nav__items--main
-            li.main-nav__item.main-nav__item--dropdown
-              a.page-header__dropdown-toggle.main-nav__link(href='#')
+            li.main-nav__item.header-menu__dropdown
+              a.header-menu__dropdown-toggle.main-nav__link(href='#')
                 | Каталог
               .header-menu__dropdown-menu
                 ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
@@ -38,7 +38,7 @@ block content
                 | О Компании
         .page-header__menu.header-menu
           .header-menu__dropdown
-            a.page-header__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
+            a.header-menu__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
               svg(width='17', height='17')
                 use(xlink:href='img/symbols.svg#icon-loupe')
               span.visually-hidden
@@ -49,7 +49,7 @@ block content
                   | Поле поиска
                 input.field(type='search', placeholder='Что ищем?')
           .header-menu__dropdown
-            a.page-header__dropdown-toggle.header-menu__link(href='#')
+            a.header-menu__dropdown-toggle.header-menu__link(href='#')
               svg(width='21', height='19')
                 use(xlink:href='img/symbols.svg#icon-entrance')
               | Вход

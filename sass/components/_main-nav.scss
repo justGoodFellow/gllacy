@@ -27,20 +27,16 @@
   }
 }
 
-.main-nav__item--dropdown {
-  position: relative;
-}
-
 .main-nav {
   .header-menu__dropdown-menu {
     left: 0;
+    padding: 5px 0;
 
     min-width: 145px;
   }
 }
 
 .main-nav__items--lvl2 {
-  display: flex;
   flex-direction: column;
 
   .main-nav__link {
