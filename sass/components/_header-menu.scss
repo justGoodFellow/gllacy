@@ -9,7 +9,12 @@
 
   margin-left: 10px;
 
-  &:hover,
+  &:hover {
+    .header-menu__dropdown-menu {
+      display: block;
+    }
+  }
+
   &:focus-within {
     .header-menu__dropdown-menu {
       display: block;
