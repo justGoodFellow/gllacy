@@ -117,35 +117,3 @@
     color: $color-red;
   }
 }
-
-.header-menu__basket {
-  display: flex;
-  flex-direction: column;
-
-  table {
-    color: $gray--dark;
-  }
-
-  tbody {
-    font-size: 13px;
-    line-height: 16px;
-  }
-
-  tfoot {
-    font-weight: 700;
-    font-size: 15px;
-    text-align: right;
-  }
-
-  img {
-    border-radius: 50%;
-  }
-}
-
-.header-menu__basket-price {
-  color: #999999;
-}
-
-.header-menu__basket-submit {
-  margin-left: auto;
-}

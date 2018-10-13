@@ -9,8 +9,8 @@ block content
             use(xlink:href='img/symbols.svg#logo')
         nav.main-nav
           ul.main-nav__items.main-nav__items--main
-            li.main-nav__item
-              a.page-header__dropdown-toggle.main-nav__link(href='#')
+            li.main-nav__item.header-menu__dropdown
+              a.page-header__dropdown-toggle.main-nav__link.main-nav__link--active(href='#')
                 | Каталог
               .header-menu__dropdown-menu
                 ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
@@ -38,94 +38,96 @@ block content
                 | О Компании
         .page-header__menu.header-menu
           .header-menu__dropdown
-            a.page-header__dropdown-toggle.header-menu__link(href='#')
+            a.header-menu__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
               svg(width='17', height='17')
                 use(xlink:href='img/symbols.svg#icon-loupe')
               span.visually-hidden
                 | Поиск
-            form.page-header__dropdown-menu.header-menu__search(action='#', method='post')
+            form.header-menu__dropdown-menu.header-menu__search(action='#', method='post')
               label
                 span.visually-hidden
                   | Поле поиска
                 input.field(type='search', placeholder='Что ищем?')
           .header-menu__dropdown
-            a.page-header__dropdown-toggle.header-menu__link(href='#')
+            a.header-menu__dropdown-toggle.header-menu__link(href='#')
               svg(width='21', height='19')
                 use(xlink:href='img/symbols.svg#icon-entrance')
               | Вход
-            form.page-header__dropdown-menu.header-menu__login.login(action='#', method='post')
-              label
-                span.visually-hidden
-                  | Электронная почта
-                input.field(type='email', placeholder='Электронная почта')
-              label
-                span.visually-hidden
-                  | Пароль
-                input.field(type='password', placeholder='Пароль')
-              .login__footer
-                button.btn(type='submit')
-                  | Войти
-                p.login__links
-                  a.login__link(href='#')
-                    | Забыли пароль?
-                  br
-                  a.login__link(href='#')
-                    | Новая регистрация
+            .header-menu__dropdown-menu
+              form.header-menu__login.login(action='#', method='post')
+                label
+                  span.visually-hidden
+                    | Электронная почта
+                  input.field.header-menu__login-field(type='email', placeholder='Электронная почта')
+                label
+                  span.visually-hidden
+                    | Пароль
+                  input.field.header-menu__login-field(type='password', placeholder='Пароль')
+                .login__footer
+                  button.btn(type='submit')
+                    | Войти
+                  p.login__links
+                    a.login__link(href='#')
+                      | Забыли пароль?
+                    br
+                    a.login__link(href='#')
+                      | Новая регистрация
           .header-menu__dropdown
-            a.page-header__dropdown-toggle.header-menu__link(href='#')
+            a.header-menu__dropdown-toggle.header-menu__link(href='#')
               svg(width='21', height='20')
                 use(xlink:href='img/symbols.svg#icon-basket')
               span
                 | 2
-                |
+              | &nbsp;
               span
                 | товара
-            .page-header__dropdown-menu.header-menu__basket
-              table
-                tbody
-                  tr
-                    td
-                      button(type='button')
-                        span.visually-hidden
-                          | Убрать
-                    td
-                      img(src='img/product-1.jpg', width='33', height='33', alt='')
-                    td
-                      | Пломбир с апельсиновым джемом
-                    td
-                      | 1,5 кг х
-                      |
-                      span.header-menu__basket-price
-                        | 200 руб.
-                    td
-                      | 300 руб.
-                  tr
-                    td
-                      button(type='button')
-                        span.visually-hidden
-                          | Убрать
-                    td
-                      img(src='img/product-3.jpg', width='33', height='33', alt='')
-                    td
-                      | Клубничный пломбир с присыпкой из белого шоколада
-                    td
-                      | 1,5 кг х
-                      |
-                      span.header-menu__basket-price
+            .header-menu__dropdown-menu(style='display: block;')
+              .header-menu__basket.basket
+                table.basket__table
+                  tbody
+                    tr
+                      td
+                        button(type='button')
+                          span.visually-hidden
+                            | Убрать
+                      td
+                        img(src='img/product-1.jpg', width='33', height='33', alt='')
+                      td.table__description
+                        | Пломбир с апельсиновым джемом
+                      td
+                        | 1,5 кг х
+                        |
+                        span.header-menu__basket-price
+                          | 200 руб.
+                      td
                         | 300 руб.
-                    td
-                      | 450 руб.
-                tfoot
-                  tr
-                    td(colspan='5')
-                      | Итого:
-                      |
-                      span
-                        | 750
-                      |
-                      | руб.
-              a.header-menu__basket-submit.btn(href='#')
-                | Оформить заказ
+                    tr
+                      td
+                        button(type='button')
+                          span.visually-hidden
+                            | Убрать
+                      td
+                        img(src='img/product-3.jpg', width='33', height='33', alt='')
+                      td.table__description
+                        | Клубничный пломбир с присыпкой из белого шоколада
+                      td
+                        | 1,5 кг х
+                        |
+                        span.header-menu__basket-price
+                          | 300 руб.
+                      td
+                        | 450 руб.
+                  tfoot
+                    tr
+                      td(colspan='5')
+                        | Итого:
+                        |
+                        span
+                          | 750
+                        |
+                        | руб.
+                a.header-menu__basket-submit.btn(href='#')
+                  | Оформить заказ
       .page-header__row.page-header__row--bottom
         p.page-header__phone
           | с 10 до 20, ежедневно

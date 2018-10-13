@@ -1,0 +1,45 @@
+.basket {
+  padding: 15px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 540px;
+  box-sizing: border-box;
+
+  table {
+    color: $gray--dark;
+    border-collapse: collapse;
+  }
+
+  tbody {
+    font-size: 13px;
+    line-height: 16px;
+    border-bottom: 1px solid #cacac7;
+  }
+
+  tr {
+    // margin-bottom: 20px;
+  }
+
+  tfoot {
+    font-weight: 700;
+    font-size: 15px;
+    text-align: right;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.table__description {
+  width: 215px;
+}
+
+.header-menu__basket-price {
+  color: #999999;
+}
+
+.header-menu__basket-submit {
+  margin-left: auto;
+}
