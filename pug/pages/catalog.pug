@@ -73,7 +73,7 @@ block content
                     a.login__link(href='#')
                       | Новая регистрация
           .header-menu__dropdown
-            a.header-menu__dropdown-toggle.header-menu__link(href='#')
+            a.header-menu__dropdown-toggle.header-menu__link.header-menu__link--basket-active(href='#')
               svg(width='21', height='20')
                 use(xlink:href='img/symbols.svg#icon-basket')
               span
@@ -81,36 +81,36 @@ block content
               | &nbsp;
               span
                 | товара
-            .header-menu__dropdown-menu(style='display: block;')
-              .header-menu__basket.basket
-                table.basket__table
+            .header-menu__dropdown-menu
+              .header-menu__basket.mini-basket
+                table.mini-basket__items
                   tbody
-                    tr
-                      td
+                    tr.mini-basket__item
+                      td.mini-basket__item-cansel
                         button(type='button')
                           span.visually-hidden
                             | Убрать
-                      td
+                      td.mini-basket__item-img
                         img(src='img/product-1.jpg', width='33', height='33', alt='')
-                      td.table__description
+                      td.mini-basket__item-desc
                         | Пломбир с апельсиновым джемом
-                      td
+                      td.mini-basket__count
                         | 1,5 кг х
                         |
                         span.header-menu__basket-price
                           | 200 руб.
                       td
                         | 300 руб.
-                    tr
-                      td
+                    tr.mini-basket__item
+                      td.mini-basket__item-cansel
                         button(type='button')
                           span.visually-hidden
                             | Убрать
-                      td
+                      td.mini-basket__item-img
                         img(src='img/product-3.jpg', width='33', height='33', alt='')
-                      td.table__description
+                      td.mini-basket__desc
                         | Клубничный пломбир с присыпкой из белого шоколада
-                      td
+                      td.mini-basket__count
                         | 1,5 кг х
                         |
                         span.header-menu__basket-price

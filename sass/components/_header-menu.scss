@@ -77,6 +77,16 @@
       margin: 0;
     }
   }
+
+  &--basket-active {
+    color: $gray--dark;
+
+    background-color: $gray--light;
+
+    svg {
+      fill: $gray--dark;
+    }
+  }
 }
 
 .header-menu__search {

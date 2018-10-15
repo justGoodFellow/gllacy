@@ -13,8 +13,8 @@
     "node": "8.12.0"
   },
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
-    "browser-sync": "^2.24.7",
+    "autoprefixer": "^9.2.0",
+    "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
     "del": "^3.0.0",
     "editorconfig-tools": "^0.1.1",
