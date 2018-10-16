@@ -1,5 +1,16 @@
 .slide {
+  // display: none;
+  // min-height: 850px;
+
   text-align: center;
+
+  // background-image: url('../img/slide-1.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  &:first-child {
+    display: block;
+  }
 }
 
 .slide__title {

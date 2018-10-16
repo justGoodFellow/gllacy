@@ -1,6 +1,7 @@
 .promotion {
   display: flex;
   flex-direction: column;
+  width: 100%;
   padding: 20px;
 
   &--raspberries {
@@ -13,16 +14,20 @@
 }
 
 .promotion__title {
+  margin: 0;
+
   font-size: 35px;
 }
 
 .promotion__description {
+  margin-bottom: 25px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
 }
 
 .promotion__link {
+  align-self: flex-end;
   margin-top: auto;
-  margin-left: auto;
 }
