@@ -19,12 +19,52 @@
 }
 
 .info__item {
+  position: relative;
+
   box-sizing: border-box;
   width: 46.51%;
   margin-right: 2.32%;
   padding-left: 60px;
 
   line-height: 22px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 49px;
+    height: 49px;
+
+    background-image: url('../img/icon-ice-cream.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--ice-cream {
+    &::before {
+      background-image: url('../img/icon-ice-cream.svg');
+    }
+  }
+
+  &--farm {
+    &::before {
+      background-image: url('../img/icon-cow.svg');
+    }
+  }
+
+  &--natural {
+    &::before {
+      background-image: url('../img/icon-eco.svg');
+    }
+  }
+
+  &--termo {
+    &::before {
+      background-image: url('../img/icon-thermometer.svg');
+    }
+  }
 
   &:nth-child(2n) {
     margin-right: 0;
