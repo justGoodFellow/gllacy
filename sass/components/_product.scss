@@ -1,39 +1,112 @@
 .product {
+  position: relative;
+
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
   width: 23.25%;
   margin-right: 2.32%;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 
   text-align: center;
-
-  border-radius: 5px;
 
   &:nth-child(4n) {
     margin-right: 0;
   }
 
   &:hover {
-    background-color: rgba(white, 0.2);
-    box-shadow: 0 20px 20px rgba(black, 0.4);
+    .product__container {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+
+      width: 100%;
+      padding: 10px;
+      padding-bottom: 20px;
+
+      background-color: rgba(white, 0.2);
+      box-shadow: 0 20px 20px rgba(black, 0.4);
+    }
+
+    .product__fast-look {
+      display: inline-block;
+    }
+  }
+
+  &:focus-within {
+    .product__container {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      z-index: 1;
+
+      width: 100%;
+      padding: 10px;
+      padding-bottom: 20px;
+
+      background-color: rgba(white, 0.2);
+      box-shadow: 0 20px 20px rgba(black, 0.4);
+    }
+
+    .product__fast-look {
+      display: inline-block;
+    }
+  }
+}
+
+.product__container {
+  border-radius: 5px;
+}
+
+.product__inner {
+  position: relative;
+}
+
+.product__flag {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 61px;
+  height: 61px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+
+  &--hit {
+    background-image: url('../img/icon-hit.svg');
   }
 }
 
 .product__img-wrap {
   img {
+    display: block;
+
     border-radius: 50%;
   }
 }
 
 .price {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+
+  margin: 0;
+
   font-weight: 700;
-  font-size: 30px;
+  font-size: 45px;
   text-shadow: 0 1px 3px rgba(#313235, 0.5);
 }
 
-.price__number {
-  font-size: 45px;
+.price__measure {
+  font-size: 30px;
 }
 
 .product__title {
+  margin: 10px 0;
+
   text-align: center;
 }
 
@@ -41,4 +114,10 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+}
+
+.product__fast-look {
+  display: none;
+  margin-top: auto;
+  padding: 0 15px;
 }
