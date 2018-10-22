@@ -1,9 +1,33 @@
 .subscription {
+  padding: 5px;
+
+  background-color: $color-red--light;
+}
+
+.subscription__inner {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding: 30px 20px;
+
   color: $gray--dark;
 
   background-color: $gray--light;
+  border-radius: 10px;
 }
 
 .subscription__description {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   line-height: 22px;
+}
+
+.subscription__form {
+  display: flex;
+  align-items: center;
+}
+
+.subscription__wrap {
+  flex-grow: 1;
+  margin-right: 10px;
 }

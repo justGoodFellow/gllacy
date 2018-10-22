@@ -262,17 +262,18 @@ block content
                   | 10 способов сервировки фруктовых щербетов к столу
           .main__column
             section.subscription
-              h2.visually-hidden
-                | Подписка
-              p.subscription__description
-                | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-              form.subscription__form(action='#', method='post')
-                label
-                  span.visually-hidden
-                    | Электронная почта
-                  input.subscription__field.field(type='email', placeholder='Электронная почта')
-                button.subscription__submit.btn(type='submit')
-                  | Отправить
+              .subscription__inner
+                h2.visually-hidden
+                  | Подписка
+                p.subscription__description
+                  | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+                form.subscription__form(action='#', method='post')
+                  label.subscription__wrap
+                    span.visually-hidden
+                      | Электронная почта
+                    input.subscription__field.field(type='email', placeholder='Электронная почта')
+                  button.subscription__submit.btn(type='submit')
+                    | Отправить
         section.contacts
           .contacts__wrapper
             h2.visually-hidden

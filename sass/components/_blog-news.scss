@@ -2,6 +2,7 @@
   box-sizing: border-box;
   min-height: 220px;
   padding: 20px;
+  padding-right: 46%;
 
   color: $gray--dark;
 
@@ -23,7 +24,6 @@
 
 .blog-news__news-link {
   display: block;
-  padding-right: 46%;
 
   font-weight: 700;
   font-size: 24px;
