@@ -1,243 +1,244 @@
 extends ../layouts/base.pug
 
 block content
-  header.page-header
-    .page-header__wrapper
-      .page-header__row.page-header__row--top
-        a.page-header__logo.logo
-          svg(width='154', height='64', aria-label='Логотип Глейси')
-            use(xlink:href='img/symbols.svg#logo')
-        nav.main-nav
-          ul.main-nav__items.main-nav__items--main
-            li.main-nav__item.header-menu__dropdown
-              a.header-menu__dropdown-toggle.main-nav__link(href='#')
-                | Каталог
+  body.index
+    header.page-header
+      .page-header__wrapper
+        .page-header__row.page-header__row--top
+          a.page-header__logo.logo
+            svg(width='154', height='64', aria-label='Логотип Глейси')
+              use(xlink:href='img/symbols.svg#logo')
+          nav.main-nav
+            ul.main-nav__items.main-nav__items--main
+              li.main-nav__item.header-menu__dropdown
+                a.header-menu__dropdown-toggle.main-nav__link(href='#')
+                  | Каталог
+                .header-menu__dropdown-menu
+                  ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
+                    li.main-nav__item
+                      a.main-nav__link(href='#')
+                        | Новинки
+                  ul.main-nav__items.main-nav__items--lvl2
+                    li.main-nav__item
+                      a.main-nav__link(href='catalog.html')
+                        | Сливочное
+                    li.main-nav__item
+                      a.main-nav__link(href='#')
+                        | Щербеты
+                    li.main-nav__item
+                      a.main-nav__link(href='#')
+                        | Фруктовый лед
+                    li.main-nav__item
+                      a.main-nav__link(href='#')
+                        | Мелорин
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Доставка и оплата
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | О Компании
+          .page-header__menu.header-menu
+            .header-menu__dropdown
+              a.header-menu__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
+                svg(width='17', height='17')
+                  use(xlink:href='img/symbols.svg#icon-loupe')
+                span.visually-hidden
+                  | Поиск
+              form.header-menu__dropdown-menu.header-menu__search(action='#', method='post')
+                label
+                  span.visually-hidden
+                    | Поле поиска
+                  input.field(type='search', placeholder='Что ищем?')
+            .header-menu__dropdown
+              a.header-menu__dropdown-toggle.header-menu__link(href='#')
+                svg(width='21', height='19')
+                  use(xlink:href='img/symbols.svg#icon-entrance')
+                | Вход
               .header-menu__dropdown-menu
-                ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
-                  li.main-nav__item
-                    a.main-nav__link(href='#')
-                      | Новинки
-                ul.main-nav__items.main-nav__items--lvl2
-                  li.main-nav__item
-                    a.main-nav__link(href='catalog.html')
-                      | Сливочное
-                  li.main-nav__item
-                    a.main-nav__link(href='#')
-                      | Щербеты
-                  li.main-nav__item
-                    a.main-nav__link(href='#')
-                      | Фруктовый лед
-                  li.main-nav__item
-                    a.main-nav__link(href='#')
-                      | Мелорин
-            li.main-nav__item
-              a.main-nav__link(href='#')
-                | Доставка и оплата
-            li.main-nav__item
-              a.main-nav__link(href='#')
-                | О Компании
-        .page-header__menu.header-menu
-          .header-menu__dropdown
-            a.header-menu__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
-              svg(width='17', height='17')
-                use(xlink:href='img/symbols.svg#icon-loupe')
-              span.visually-hidden
-                | Поиск
-            form.header-menu__dropdown-menu.header-menu__search(action='#', method='post')
-              label
-                span.visually-hidden
-                  | Поле поиска
-                input.field(type='search', placeholder='Что ищем?')
-          .header-menu__dropdown
-            a.header-menu__dropdown-toggle.header-menu__link(href='#')
-              svg(width='21', height='19')
-                use(xlink:href='img/symbols.svg#icon-entrance')
-              | Вход
-            .header-menu__dropdown-menu
-              form.header-menu__login.login(action='#', method='post')
-                label
+                form.header-menu__login.login(action='#', method='post')
+                  label
+                    span.visually-hidden
+                      | Электронная почта
+                    input.field.header-menu__login-field(type='email', placeholder='Электронная почта')
+                  label
+                    span.visually-hidden
+                      | Пароль
+                    input.field.header-menu__login-field(type='password', placeholder='Пароль')
+                  .login__footer
+                    button.btn(type='submit')
+                      | Войти
+                    p.login__links
+                      a.login__link(href='#')
+                        | Забыли пароль?
+                      br
+                      a.login__link(href='#')
+                        | Новая регистрация
+            .header-menu__dropdown
+              a.header-menu__link(href='#')
+                svg(width='21', height='20')
+                  use(xlink:href='img/symbols.svg#icon-basket')
+                span
+                  | Пусто
+        .page-header__row.page-header__row--bottom
+          p.page-header__phone
+            | с 10 до 20, ежедневно
+            br
+            a.page-header__phone-number(href='tel:88124502525')
+              | 8 812 450-25-25
+    main
+      .main__wrapper
+        h1.visually-hidden
+          | Магазин мороженного Глэйси
+        section.slider
+          .slider__container
+            h2.visually-hidden
+              | Два мороженых
+            .slider__slides
+              .slider__slide.slide
+                h3.slide__title
+                  | Крем-брюле и пломбир с малиновым джемом
+                a.slide__link.btn(href='#')
+                  | Давайте оба!
+              .slider__slide.slide
+                h3.slide__title
+                  | Шоколадный пломбир и лимонный сорбет
+                a.slide__link.btn(href='#')
+                  | Давайте оба!
+              .slider__slide.slide
+                h3.slide__title
+                  | Пломбир с помадкой и клубничный щербет
+                a.slide__link.btn(href='#')
+                  | Давайте оба!
+            .slider__controls
+                button.slider__controls-item(type='button', disabled)
                   span.visually-hidden
-                    | Электронная почта
-                  input.field.header-menu__login-field(type='email', placeholder='Электронная почта')
-                label
+                    | 1
+                button.slider__controls-item(type='button')
                   span.visually-hidden
-                    | Пароль
-                  input.field.header-menu__login-field(type='password', placeholder='Пароль')
-                .login__footer
-                  button.btn(type='submit')
-                    | Войти
-                  p.login__links
-                    a.login__link(href='#')
-                      | Забыли пароль?
-                    br
-                    a.login__link(href='#')
-                      | Новая регистрация
-          .header-menu__dropdown
-            a.header-menu__link(href='#')
-              svg(width='21', height='20')
-                use(xlink:href='img/symbols.svg#icon-basket')
-              span
-                | Пусто
-      .page-header__row.page-header__row--bottom
-        p.page-header__phone
-          | с 10 до 20, ежедневно
-          br
-          a.page-header__phone-number(href='tel:88124502525')
-            | 8 812 450-25-25
-  main
-    .main__wrapper
-      h1.visually-hidden
-        | Магазин мороженного Глэйси
-      section.slider
-        .slider__container
+                    | 2
+                button.slider__controls-item(type='button')
+                  span.visually-hidden
+                    | 3
+        section.promotions
           h2.visually-hidden
-            | Два мороженых
-          .slider__slides
-            .slider__slide.slide
-              h3.slide__title
-                | Крем-брюле и пломбир с малиновым джемом
-              a.slide__link.btn(href='#')
-                | Давайте оба!
-            .slider__slide.slide
-              h3.slide__title
-                | Шоколадный пломбир и лимонный сорбет
-              a.slide__link.btn(href='#')
-                | Давайте оба!
-            .slider__slide.slide
-              h3.slide__title
-                | Пломбир с помадкой и клубничный щербет
-              a.slide__link.btn(href='#')
-                | Давайте оба!
-          .slider__controls
-              button.slider__controls-item(type='button', disabled)
-                span.visually-hidden
-                  | 1
-              button.slider__controls-item(type='button')
-                span.visually-hidden
-                  | 2
-              button.slider__controls-item(type='button')
-                span.visually-hidden
-                  | 3
-      section.promotions
-        h2.visually-hidden
-          | Акции
-        .main__row
-          .main__column
-            .promotions__promotion.promotion.promotion--raspberries
-              h3.promotion__title
-                | Малинка даром!
-              .promotion__description
-                p
-                  | При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-              a.promotion__link.btn(href='#')
-                | Хочу варенье!
-          .main__column
-            .promotions__promotion.promotion.promotion--chocolate
-              h3.promotion__title
-                | Шоколадки даром!
-              .promotion__description
-                p
-                  | При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
-              a.promotion__link.btn(href='#')
-                | Хочу шоколадки!
-      section.best-sellers
-        .best-sellers__container
-          h2.visually-hidden
-            | Популярное
-          .best-sellers__items
-            .best-sellers__item.product
-              .product__container
-                .product__inner
-                  .product__flag.product__flag--hit
-                    span.visually-hidden
-                      | Хит
-                  .product__img-wrap
-                    img(src='img/product-1.jpg', width='267', height='267', alt='')
-                  p.product__price.price
-                    span.price__number
-                      | 310
-                    span
-                      |
-                      | &#8381;
-                    span.visually-hidden
-                      | рублей
-                    span.price__measure
-                      | /кг
-                h3.product__title
-                  a.product__link(href='#')
-                    | Сливочное с апельсиновым джемом и цитрусовой стружкой
-                a.product__fast-look.btn(href='#')
-                  | Быстрый просмотр
-            .best-sellers__item.product
-              .product__container
-                .product__inner
-                  .product__flag.product__flag--hit
-                    span.visually-hidden
-                      | Хит
-                  .product__img-wrap
-                    img(src='img/product-2.jpg', width='267', height='267', alt='')
-                  p.product__price.price
-                    span.price__number
-                      | 380
-                    span
-                      |
-                      | &#8381;
-                    span.visually-hidden
-                      | рублей
-                    span.price__measure
-                      | /кг
-                h3.product__title
-                  a.product__link(href='#')
-                    | Сливочно-кофейное с кусочками шоколада
-                a.product__fast-look.btn(href='#')
-                  | Быстрый просмотр
-            .best-sellers__item.product
-              .product__container
-                .product__inner
-                  .product__flag.product__flag--hit
-                    span.visually-hidden
-                      | Хит
-                  .product__img-wrap
-                    img(src='img/product-3.jpg', width='267', height='267', alt='')
-                  p.product__price.price
-                    span.price__number
-                      | 355
-                    span
-                      |
-                      | &#8381;
-                    span.visually-hidden
-                      | рублей
-                    span.price__measure
-                      | /кг
-                h3.product__title
-                  a.product__link(href='#')
-                    | Сливочно-клубничное с присыпкой из белого шоколада
-                a.product__fast-look.btn(href='#')
-                  | Быстрый просмотр
-            .best-sellers__item.product
-              .product__container
-                .product__inner
-                  .product__flag.product__flag--hit
-                    span.visually-hidden
-                      | Хит
-                  .product__img-wrap
-                    img(src='img/product-4.jpg', width='267', height='267', alt='')
-                  p.product__price.price
-                    span.price__number
-                      | 415
-                    span
-                      |
-                      | &#8381;
-                    span.visually-hidden
-                      |
-                      | рублей
-                    span.price__measure
-                      | /кг
-                h3.product__title
-                  a.product__link(href='#')
-                    | Сливочное крем-брюле с карамельной подливкой
-                a.product__fast-look.btn(href='#')
-                  | Быстрый просмотр
+            | Акции
+          .main__row
+            .main__column
+              .promotions__promotion.promotion.promotion--raspberries
+                h3.promotion__title
+                  | Малинка даром!
+                .promotion__description
+                  p
+                    | При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
+                a.promotion__link.btn(href='#')
+                  | Хочу варенье!
+            .main__column
+              .promotions__promotion.promotion.promotion--chocolate
+                h3.promotion__title
+                  | Шоколадки даром!
+                .promotion__description
+                  p
+                    | При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
+                a.promotion__link.btn(href='#')
+                  | Хочу шоколадки!
+        section.best-sellers
+          .best-sellers__container
+            h2.visually-hidden
+              | Популярное
+            .best-sellers__items
+              .best-sellers__item.product
+                .product__container
+                  .product__inner
+                    .product__flag.product__flag--hit
+                      span.visually-hidden
+                        | Хит
+                    .product__img-wrap
+                      img(src='img/product-1.jpg', width='267', height='267', alt='')
+                    p.product__price.price
+                      span.price__number
+                        | 310
+                      span
+                        |
+                        | &#8381;
+                      span.visually-hidden
+                        | рублей
+                      span.price__measure
+                        | /кг
+                  h3.product__title
+                    a.product__link(href='#')
+                      | Сливочное с апельсиновым джемом и цитрусовой стружкой
+                  a.product__fast-look.btn(href='#')
+                    | Быстрый просмотр
+              .best-sellers__item.product
+                .product__container
+                  .product__inner
+                    .product__flag.product__flag--hit
+                      span.visually-hidden
+                        | Хит
+                    .product__img-wrap
+                      img(src='img/product-2.jpg', width='267', height='267', alt='')
+                    p.product__price.price
+                      span.price__number
+                        | 380
+                      span
+                        |
+                        | &#8381;
+                      span.visually-hidden
+                        | рублей
+                      span.price__measure
+                        | /кг
+                  h3.product__title
+                    a.product__link(href='#')
+                      | Сливочно-кофейное с кусочками шоколада
+                  a.product__fast-look.btn(href='#')
+                    | Быстрый просмотр
+              .best-sellers__item.product
+                .product__container
+                  .product__inner
+                    .product__flag.product__flag--hit
+                      span.visually-hidden
+                        | Хит
+                    .product__img-wrap
+                      img(src='img/product-3.jpg', width='267', height='267', alt='')
+                    p.product__price.price
+                      span.price__number
+                        | 355
+                      span
+                        |
+                        | &#8381;
+                      span.visually-hidden
+                        | рублей
+                      span.price__measure
+                        | /кг
+                  h3.product__title
+                    a.product__link(href='#')
+                      | Сливочно-клубничное с присыпкой из белого шоколада
+                  a.product__fast-look.btn(href='#')
+                    | Быстрый просмотр
+              .best-sellers__item.product
+                .product__container
+                  .product__inner
+                    .product__flag.product__flag--hit
+                      span.visually-hidden
+                        | Хит
+                    .product__img-wrap
+                      img(src='img/product-4.jpg', width='267', height='267', alt='')
+                    p.product__price.price
+                      span.price__number
+                        | 415
+                      span
+                        |
+                        | &#8381;
+                      span.visually-hidden
+                        |
+                        | рублей
+                      span.price__measure
+                        | /кг
+                  h3.product__title
+                    a.product__link(href='#')
+                      | Сливочное крем-брюле с карамельной подливкой
+                  a.product__fast-look.btn(href='#')
+                    | Быстрый просмотр
         section.info
           .info__container
             h2.info__title
@@ -272,54 +273,54 @@ block content
                   input.subscription__field.field(type='email', placeholder='Электронная почта')
                 button.subscription__submit.btn(type='submit')
                   | Отправить
-      section.contacts
-        .contacts__wrapper
-          h2.visually-hidden
-            | Контакты
-          .contacts__content
-            address.contacts__address
-              p.contacts__content-row
-                | Адрес главного офиса и офлайн-магазина:
-                br
-                b
-                  | ул. Большая Конюшенная 19/8,
+        section.contacts
+          .contacts__wrapper
+            h2.visually-hidden
+              | Контакты
+            .contacts__content
+              address.contacts__address
+                p.contacts__content-row
+                  | Адрес главного офиса и офлайн-магазина:
                   br
-                  | Санкт-Петербург
-              p.contacts__content-row
-                | Для заказов по телефону:
-                br
-                b
-                  a.contacts__phone(href='tel:88124502525')
-                    | 8 812 450-25-25
-                br
-                | (с 10 до 20 ежедневно)
-            a.contacts__btn.btn(href='#')
-              | Форма обратной связи
-          section.contacts__feedback.feedback
-            h3.feedback__title
-              | Мы обязательно вам ответим!
-            form.feedback__form(action='#', method='post')
-              .feedback__items
-                .feedback__item
-                  label
-                    span.visually-hidden
-                      | Имя
-                    input.feedback__field.field(type='text', placeholder='Как вас зовут?')
-                .feedback__item
-                  label
-                    span.visually-hidden
-                      | Электронная почта
-                    input.feedback__field.field(type='email', placeholder='Ваша почта для ответа?')
-                .feedback__item
-                  label
-                    span.visually-hidden
-                      | Поле для текста
-                    textarea.feedback__field.field(placeholder='Напишите что-нибудь...')
-              button.feedback__send.btn(type='submit')
-                | Отправить
-            button.feedback__close(type='button')
-              | Закрыть
-          .modal__overlay
-        .contacts__map
-          .contacts__map-img-wrap
-            img(src='img/map.jpg', width='1200', height='430', alt='Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург')
+                  b
+                    | ул. Большая Конюшенная 19/8,
+                    br
+                    | Санкт-Петербург
+                p.contacts__content-row
+                  | Для заказов по телефону:
+                  br
+                  b
+                    a.contacts__phone(href='tel:88124502525')
+                      | 8 812 450-25-25
+                  br
+                  | (с 10 до 20 ежедневно)
+              a.contacts__btn.btn(href='#')
+                | Форма обратной связи
+            section.contacts__feedback.feedback
+              h3.feedback__title
+                | Мы обязательно вам ответим!
+              form.feedback__form(action='#', method='post')
+                .feedback__items
+                  .feedback__item
+                    label
+                      span.visually-hidden
+                        | Имя
+                      input.feedback__field.field(type='text', placeholder='Как вас зовут?')
+                  .feedback__item
+                    label
+                      span.visually-hidden
+                        | Электронная почта
+                      input.feedback__field.field(type='email', placeholder='Ваша почта для ответа?')
+                  .feedback__item
+                    label
+                      span.visually-hidden
+                        | Поле для текста
+                      textarea.feedback__field.field(placeholder='Напишите что-нибудь...')
+                button.feedback__send.btn(type='submit')
+                  | Отправить
+              button.feedback__close(type='button')
+                | Закрыть
+            .modal__overlay
+          .contacts__map
+            .contacts__map-img-wrap
+              img(src='img/map.jpg', width='1200', height='430', alt='Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург')

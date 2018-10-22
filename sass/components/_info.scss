@@ -8,6 +8,8 @@
 }
 
 .info__title {
+  margin-top: 0;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -22,8 +24,10 @@
   position: relative;
 
   box-sizing: border-box;
-  width: 46.51%;
+  width: 48.82%;
+  margin-top: 0;
   margin-right: 2.32%;
+  padding-top: 15px;
   padding-left: 60px;
 
   line-height: 22px;
