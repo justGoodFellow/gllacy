@@ -1,8 +1,12 @@
 .contacts__wrapper {
   @include wrapper;
+
+  // position: relative;
 }
 
 .contacts__content {
+  // position: absolute;
+
   box-sizing: border-box;
   width: 300px;
   padding: 30px 25px;
@@ -32,6 +36,8 @@
 }
 
 .feedback {
+  // position: absolute;
+
   box-sizing: border-box;
   width: 477px;
   padding: 20px 25px;
