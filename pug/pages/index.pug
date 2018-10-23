@@ -281,8 +281,9 @@ html(lang='ru')
                     input.subscription__field.field(type='email', placeholder='Электронная почта')
                   button.subscription__submit.btn(type='submit')
                     | Отправить
-        section.contacts
-          .contacts__wrapper
+      section.contacts
+        .contacts__wrapper
+          .contacts__inner
             h2.visually-hidden
               | Контакты
             .contacts__content
@@ -291,9 +292,9 @@ html(lang='ru')
                   | Адрес главного офиса и офлайн-магазина:
                   br
                   b
-                    | ул. Большая Конюшенная 19/8,
+                    | ул. Большая Конюшенная
                     br
-                    | Санкт-Петербург
+                    | 19/8, Санкт-Петербург
                 p.contacts__content-row
                   | Для заказов по телефону:
                   br
@@ -304,33 +305,34 @@ html(lang='ru')
                   | (с 10 до 20 ежедневно)
               a.contacts__btn.btn(href='#')
                 | Форма обратной связи
-            section.contacts__feedback.feedback
-              h3.feedback__title
-                | Мы обязательно вам ответим!
-              form.feedback__form(action='#', method='post')
-                .feedback__items
-                  .feedback__item
-                    label
-                      span.visually-hidden
-                        | Имя
-                      input.feedback__field.field(type='text', placeholder='Как вас зовут?')
-                  .feedback__item
-                    label
-                      span.visually-hidden
-                        | Электронная почта
-                      input.feedback__field.field(type='email', placeholder='Ваша почта для ответа?')
-                  .feedback__item
-                    label
-                      span.visually-hidden
-                        | Поле для текста
-                      textarea.feedback__field.field(placeholder='Напишите что-нибудь...')
-                button.feedback__send.btn(type='submit')
-                  | Отправить
-              button.feedback__close(type='button')
+          section.contacts__feedback.feedback
+            h3.feedback__title
+              | Мы обязательно вам ответим!
+            form.feedback__form(action='#', method='post')
+              .feedback__items
+                .feedback__item
+                  label
+                    span.visually-hidden
+                      | Имя
+                    input.feedback__field.field(type='text', placeholder='Как вас зовут?')
+                .feedback__item
+                  label
+                    span.visually-hidden
+                      | Электронная почта
+                    input.feedback__field.field(type='email', placeholder='Ваша почта для ответа?')
+                .feedback__item
+                  label
+                    span.visually-hidden
+                      | Поле для текста
+                    textarea.feedback__field.field(placeholder='Напишите что-нибудь...')
+              button.feedback__send.btn(type='submit')
+                | Отправить
+            button.feedback__close(type='button')
+              span.visually-hidden
                 | Закрыть
-            .modal__overlay
-          .contacts__map
-            .contacts__map-img-wrap
-              img(src='img/map.jpg', width='1200', height='430', alt='Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург')
+          .modal__overlay
+        .contacts__map
+          .contacts__map-img-wrap
+            img(src='img/map.jpg', width='1200', height='430', alt='Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург')
     include ../layouts/page-footer.pug
     script(src='js/concatenated.js')
