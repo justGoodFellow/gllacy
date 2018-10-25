@@ -30,8 +30,82 @@
   @include list-reset;
 }
 
+.social-links__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-right: 17px;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(white, 0.5);
+  opacity: 0.8;
+
+  &--tw {
+    background-image: url('../img/logo-twitter.svg');
+  }
+
+  &--in {
+    background-image: url('../img/logo-instagram.svg');
+  }
+
+  &--fb {
+    background-image: url('../img/logo-fb.svg');
+  }
+
+  &--vk {
+    background-image: url('../img/logo-vk.svg');
+  }
+
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 3px rgba(white, 0.7);
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.footer-nav {
+  display: flex;
+}
+
 .footer-nav__list {
   @include list-reset;
+
+  flex-direction: column;
+
+  &:first-child {
+    margin-right: 30px;
+  }
+}
+
+.footer-nav__link {
+  display: block;
+
+  line-height: 20px;
+
+  b {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -20px;
+      top: 0;
+
+      width: 16px;
+      height: 15px;
+
+      background-image: url('../img/icon-heart.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
 }
 
 .copyright {
