@@ -11,87 +11,88 @@ html(lang='ru')
   body.index
     header.page-header
       .page-header__wrapper
-        .page-header__row.page-header__row--top
-          a.page-header__logo.logo
-            svg(width='154', height='64', aria-label='Логотип Глейси')
-              use(xlink:href='img/symbols.svg#logo')
-          nav.main-nav
-            ul.main-nav__items.main-nav__items--main
-              li.main-nav__item.header-menu__dropdown
-                a.header-menu__dropdown-toggle.main-nav__link(href='#')
-                  | Каталог
-                .header-menu__dropdown-menu
-                  ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
-                    li.main-nav__item
-                      a.main-nav__link(href='#')
-                        | Новинки
-                  ul.main-nav__items.main-nav__items--lvl2
-                    li.main-nav__item
-                      a.main-nav__link(href='catalog.html')
-                        | Сливочное
-                    li.main-nav__item
-                      a.main-nav__link(href='#')
-                        | Щербеты
-                    li.main-nav__item
-                      a.main-nav__link(href='#')
-                        | Фруктовый лед
-                    li.main-nav__item
-                      a.main-nav__link(href='#')
-                        | Мелорин
-              li.main-nav__item
-                a.main-nav__link(href='#')
-                  | Доставка и оплата
-              li.main-nav__item
-                a.main-nav__link(href='#')
-                  | О Компании
-          .page-header__menu.header-menu
-            .header-menu__dropdown
-              a.header-menu__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
-                svg(width='17', height='17')
-                  use(xlink:href='img/symbols.svg#icon-loupe')
-                span.visually-hidden
-                  | Поиск
-              form.header-menu__dropdown-menu.header-menu__search(action='#', method='post')
-                label
+        .page-header__container
+          .page-header__row.page-header__row--top
+            a.page-header__logo.logo
+              svg(width='154', height='64', aria-label='Логотип Глейси')
+                use(xlink:href='img/symbols.svg#logo')
+            nav.main-nav
+              ul.main-nav__items.main-nav__items--main
+                li.main-nav__item.header-menu__dropdown
+                  a.header-menu__dropdown-toggle.main-nav__link(href='#')
+                    | Каталог
+                  .header-menu__dropdown-menu
+                    ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
+                      li.main-nav__item
+                        a.main-nav__link(href='#')
+                          | Новинки
+                    ul.main-nav__items.main-nav__items--lvl2
+                      li.main-nav__item
+                        a.main-nav__link(href='catalog.html')
+                          | Сливочное
+                      li.main-nav__item
+                        a.main-nav__link(href='#')
+                          | Щербеты
+                      li.main-nav__item
+                        a.main-nav__link(href='#')
+                          | Фруктовый лед
+                      li.main-nav__item
+                        a.main-nav__link(href='#')
+                          | Мелорин
+                li.main-nav__item
+                  a.main-nav__link(href='#')
+                    | Доставка и оплата
+                li.main-nav__item
+                  a.main-nav__link(href='#')
+                    | О Компании
+            .page-header__menu.header-menu
+              .header-menu__dropdown
+                a.header-menu__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
+                  svg(width='17', height='17')
+                    use(xlink:href='img/symbols.svg#icon-loupe')
                   span.visually-hidden
-                    | Поле поиска
-                  input.field(type='search', placeholder='Что ищем?')
-            .header-menu__dropdown
-              a.header-menu__dropdown-toggle.header-menu__link(href='#')
-                svg(width='21', height='19')
-                  use(xlink:href='img/symbols.svg#icon-entrance')
-                | Вход
-              .header-menu__dropdown-menu
-                form.header-menu__login.login(action='#', method='post')
+                    | Поиск
+                form.header-menu__dropdown-menu.header-menu__search(action='#', method='post')
                   label
                     span.visually-hidden
-                      | Электронная почта
-                    input.field.header-menu__login-field(type='email', placeholder='Электронная почта')
-                  label
-                    span.visually-hidden
-                      | Пароль
-                    input.field.header-menu__login-field(type='password', placeholder='Пароль')
-                  .login__footer
-                    button.btn(type='submit')
-                      | Войти
-                    p.login__links
-                      a.login__link(href='#')
-                        | Забыли пароль?
-                      br
-                      a.login__link(href='#')
-                        | Новая регистрация
-            .header-menu__dropdown
-              a.header-menu__link(href='#')
-                svg(width='21', height='20')
-                  use(xlink:href='img/symbols.svg#icon-basket')
-                span
-                  | Пусто
-        .page-header__row.page-header__row--bottom
-          p.page-header__phone
-            | с 10 до 20, ежедневно
-            br
-            a.page-header__phone-number(href='tel:88124502525')
-              | 8 812 450-25-25
+                      | Поле поиска
+                    input.field(type='search', placeholder='Что ищем?')
+              .header-menu__dropdown
+                a.header-menu__dropdown-toggle.header-menu__link(href='#')
+                  svg(width='21', height='19')
+                    use(xlink:href='img/symbols.svg#icon-entrance')
+                  | Вход
+                .header-menu__dropdown-menu
+                  form.header-menu__login.login(action='#', method='post')
+                    label
+                      span.visually-hidden
+                        | Электронная почта
+                      input.field.header-menu__login-field(type='email', placeholder='Электронная почта')
+                    label
+                      span.visually-hidden
+                        | Пароль
+                      input.field.header-menu__login-field(type='password', placeholder='Пароль')
+                    .login__footer
+                      button.btn(type='submit')
+                        | Войти
+                      p.login__links
+                        a.login__link(href='#')
+                          | Забыли пароль?
+                        br
+                        a.login__link(href='#')
+                          | Новая регистрация
+              .header-menu__dropdown
+                a.header-menu__link(href='#')
+                  svg(width='21', height='20')
+                    use(xlink:href='img/symbols.svg#icon-basket')
+                  span
+                    | Пусто
+          .page-header__row.page-header__row--bottom
+            p.page-header__phone
+              | с 10 до 20, ежедневно
+              br
+              a.page-header__phone-number(href='tel:88124502525')
+                | 8 812 450-25-25
     main
       .main__wrapper
         h1.visually-hidden

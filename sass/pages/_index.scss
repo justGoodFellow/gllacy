@@ -19,12 +19,50 @@
   }
 
   & > * {
-    // height: 100%;
     border-radius: 15px;
   }
 }
 
 .index {
+  .main__wrapper {
+    position: relative;
+
+    padding-top: 675px;
+  }
+
+  .page-header__wrapper {
+    position: relative;
+  }
+
+  .page-header__container {
+    position: absolute;
+    left: 0;
+    z-index: 2;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 27px;
+  }
+
+  .slider {
+    @include wrapper;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 0;
+
+    & + * {
+      position: relative;
+    }
+  }
+
+  .slider__controls {
+    left: 27px;
+  }
+
   .info {
     margin-bottom: 40px;
   }
