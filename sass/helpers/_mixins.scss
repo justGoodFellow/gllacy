@@ -25,9 +25,9 @@
 }
 
 @mixin wrapper {
-  min-width: 860px;
-  max-width: 1146px;
-  // width: 1146px;
+  // min-width: 860px;
+  // max-width: 1146px;
+  width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
 }

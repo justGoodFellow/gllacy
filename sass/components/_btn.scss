@@ -9,11 +9,10 @@
   color: white;
   text-decoration: none;
   white-space: nowrap;
-  text-shadow: 0 2px 5px rgba(#a0200b, 0.76);
 
   background: none;
   background-color: $color-red;
-  background-image: linear-gradient(90deg, #e74a35 0%, #f26843 100%);
+  background-image: linear-gradient(180deg, #f26843 0%, #e74b36 100%);
   border: none;
   border-radius: 50px;
   box-shadow: 0 2px 2px 0 rgba(#ac1000, 0.64);
@@ -23,5 +22,14 @@
   &:hover,
   &:focus {
     color: white;
+
+    background-image: linear-gradient(180deg, #f58669 0%, #ec6f5e 100%);
+    outline: none;
+    box-shadow: 0 2px 2px 0 #ac1000;
+  }
+
+  &:active {
+    background-image: linear-gradient(180deg, #d74632 0%, #e1613e 100%);
+    box-shadow: inset 0 2px 2px 0 #942718;
   }
 }
