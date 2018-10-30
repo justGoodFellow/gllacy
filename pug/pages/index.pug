@@ -18,27 +18,28 @@ html(lang='ru')
                 use(xlink:href='img/symbols.svg#logo')
             nav.main-nav
               ul.main-nav__items.main-nav__items--main
-                li.main-nav__item.header-menu__dropdown
-                  a.header-menu__dropdown-toggle.main-nav__link(href='#')
+                li.main-nav__item.dropdown
+                  a.dropdown__toggle.main-nav__link(href='#')
                     | Каталог
-                  .header-menu__dropdown-menu
-                    ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
-                      li.main-nav__item
-                        a.main-nav__link(href='#')
-                          | Новинки
-                    ul.main-nav__items.main-nav__items--lvl2
-                      li.main-nav__item
-                        a.main-nav__link(href='catalog.html')
-                          | Сливочное
-                      li.main-nav__item
-                        a.main-nav__link(href='#')
-                          | Щербеты
-                      li.main-nav__item
-                        a.main-nav__link(href='#')
-                          | Фруктовый лед
-                      li.main-nav__item
-                        a.main-nav__link(href='#')
-                          | Мелорин
+                  .dropdown__menu
+                    .dropdown__menu-inner
+                      ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
+                        li.main-nav__item
+                          a.main-nav__link(href='#')
+                            | Новинки
+                      ul.main-nav__items.main-nav__items--lvl2
+                        li.main-nav__item
+                          a.main-nav__link(href='catalog.html')
+                            | Сливочное
+                        li.main-nav__item
+                          a.main-nav__link(href='#')
+                            | Щербеты
+                        li.main-nav__item
+                          a.main-nav__link(href='#')
+                            | Фруктовый лед
+                        li.main-nav__item
+                          a.main-nav__link(href='#')
+                            | Мелорин
                 li.main-nav__item
                   a.main-nav__link(href='#')
                     | Доставка и оплата
@@ -46,42 +47,45 @@ html(lang='ru')
                   a.main-nav__link(href='#')
                     | О Компании
             .page-header__menu.header-menu
-              .header-menu__dropdown
-                a.header-menu__dropdown-toggle.header-menu__link.header-menu__link--search(href='#')
+              .dropdown
+                a.dropdown__toggle.header-menu__link.header-menu__link--search(href='#')
                   svg(width='17', height='17')
                     use(xlink:href='img/symbols.svg#icon-loupe')
                   span.visually-hidden
                     | Поиск
-                form.header-menu__dropdown-menu.header-menu__search(action='#', method='post')
-                  label
-                    span.visually-hidden
-                      | Поле поиска
-                    input.field(type='search', placeholder='Что ищем?')
-              .header-menu__dropdown
-                a.header-menu__dropdown-toggle.header-menu__link(href='#')
+                .dropdown__menu
+                  .dropdown__menu-inner
+                    form.header-menu__search(action='#', method='post')
+                      label
+                        span.visually-hidden
+                          | Поле поиска
+                        input.field(type='search', placeholder='Что ищем?')
+              .dropdown
+                a.dropdown__toggle.header-menu__link(href='#')
                   svg(width='21', height='19')
                     use(xlink:href='img/symbols.svg#icon-entrance')
                   | Вход
-                .header-menu__dropdown-menu
-                  form.header-menu__login.login(action='#', method='post')
-                    label
-                      span.visually-hidden
-                        | Электронная почта
-                      input.field.header-menu__login-field(type='email', placeholder='Электронная почта')
-                    label
-                      span.visually-hidden
-                        | Пароль
-                      input.field.header-menu__login-field(type='password', placeholder='Пароль')
-                    .login__footer
-                      button.btn(type='submit')
-                        | Войти
-                      p.login__links
-                        a.login__link(href='#')
-                          | Забыли пароль?
-                        br
-                        a.login__link(href='#')
-                          | Новая регистрация
-              .header-menu__dropdown
+                .dropdown__menu
+                  .dropdown__menu-inner
+                    form.header-menu__login.login(action='#', method='post')
+                      label
+                        span.visually-hidden
+                          | Электронная почта
+                        input.field.login__field(type='email', placeholder='Электронная почта')
+                      label
+                        span.visually-hidden
+                          | Пароль
+                        input.field.login__field(type='password', placeholder='Пароль')
+                      .login__footer
+                        button.login__submit.btn(type='submit')
+                          | Войти
+                        p.login__links
+                          a.login__link(href='#')
+                            | Забыли пароль?
+                          br
+                          a.login__link(href='#')
+                            | Новая регистрация
+              .dropdown
                 a.header-menu__link(href='#')
                   svg(width='21', height='20')
                     use(xlink:href='img/symbols.svg#icon-basket')
@@ -263,11 +267,12 @@ html(lang='ru')
         .main__row
           .main__column
             section.blog-news
-              h2.blog-news__title
-                | Новое в нашем блоге
-              h3.blog-news__news
-                a.blog-news__news-link(href='#')
-                  | 10 способов сервировки фруктовых щербетов к столу
+              .blog-news__inner
+                h2.blog-news__title
+                  | Новое в нашем блоге
+                h3.blog-news__news
+                  a.blog-news__news-link(href='#')
+                    | 10 способов сервировки фруктовых щербетов к столу
           .main__column
             section.subscription
               .subscription__inner

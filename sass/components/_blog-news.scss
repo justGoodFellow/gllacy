@@ -1,12 +1,16 @@
 .blog-news {
   box-sizing: border-box;
+  width: 100%;
   min-height: 220px;
   padding: 20px;
-  padding-right: 46%;
 
   color: $gray--dark;
 
   background-color: white;
+}
+
+.blog-news__inner {
+  width: 290px;
 }
 
 .blog-news__title {

@@ -6,7 +6,7 @@
   & > li {
     & > .main-nav__link {
       display: inline-block;
-      margin-right: 25px;
+      margin-right: 5px;
       padding: 0 15px;
 
       font-weight: 500;
@@ -47,10 +47,13 @@
 }
 
 .main-nav {
-  .header-menu__dropdown-menu {
+  .dropdown__menu {
     left: 0;
 
     min-width: 145px;
+  }
+
+  .dropdown__menu-inner {
     padding: 5px 0;
   }
 }
@@ -95,11 +98,4 @@
 
 .main-nav__items--lvl2-top {
   font-weight: 700;
-}
-
-.page-header__dropdown-menu {
-  position: absolute;
-
-  border-radius: 3px;
-  // display: none;
 }

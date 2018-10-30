@@ -105,15 +105,17 @@
 }
 
 .product__title {
+  height: 70px;
   margin: 10px 0;
+  overflow: hidden;
 
   text-align: center;
+  line-height: 22px;
+  font-size: 16px;
 }
 
 .product__link {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 22px;
 }
 
 .product__fast-look {

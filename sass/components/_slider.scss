@@ -40,9 +40,11 @@
 }
 
 .slide__title {
-  width: 670px;
+  width: 675px;
+  height: 120px;
   margin: 0 auto;
   margin-bottom: 30px;
+  overflow: hidden;
 
   font-size: 60px;
   line-height: 60px;
