@@ -1,0 +1,41 @@
+.range-filter {
+  position: relative;
+
+  width: 100%;
+}
+
+.range-filter__scale {
+  width: 175px;
+  height: 4px;
+
+  background-color: rgba(white, 0.5);
+}
+
+.range-filter__bar {
+  width: 80%;
+  height: 4px;
+
+  background-color: $gray--light;
+}
+
+.range-filter__toggle {
+  position: absolute;
+  top: -8px;
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border: 8px solid white;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-filter__min-toggle {
+  left: 13px;
+}
+
+.range-filter__max-toggle {
+  left: 110px;
+}

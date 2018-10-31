@@ -48,12 +48,20 @@
     }
   }
 
+  &--basket-empty {
+    svg {
+      color: transparent;
+    }
+  }
+
   &--basket-active {
     color: $gray--dark;
 
     background-color: $gray--light;
 
     svg {
+      color: $color-red;
+
       fill: $gray--dark;
     }
   }
