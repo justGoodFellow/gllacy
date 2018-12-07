@@ -8,7 +8,7 @@
 
 .contacts__content {
   position: absolute;
-  top: calc((430px - 300px) / 2);
+  top: calc((428px - 300px) / 2);
   right: 0;
 
   box-sizing: border-box;
@@ -118,13 +118,13 @@ textarea.feedback__field {
 .contacts__map-img-wrap {
   min-width: 900px;
   max-width: 1200px;
-  height: 430px;
+  height: 428px;
   margin: 0 auto;
   overflow: hidden;
 
   img {
     display: block;
-    height: 430px;
+    height: 428px;
 
     object-fit: cover;
   }

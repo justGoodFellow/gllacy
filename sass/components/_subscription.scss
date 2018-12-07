@@ -2,9 +2,12 @@
   padding: 5px;
 
   background-color: $color-red--light;
+  background-image: url('../img/pattern-postal.svg');
 }
 
 .subscription__inner {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   min-height: 100%;
   padding: 30px 20px;
@@ -17,7 +20,7 @@
 
 .subscription__description {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   line-height: 22px;
 }
@@ -25,6 +28,7 @@
 .subscription__form {
   display: flex;
   align-items: center;
+  margin-top: auto;
 }
 
 .subscription__wrap {

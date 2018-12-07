@@ -1,15 +1,21 @@
 .promotion {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   width: 100%;
+  min-height: 228px;
   padding: 20px;
+
+  background-repeat: no-repeat;
 
   &--raspberries {
     background-color: #c12244;
+    background-image: url('../img/promotion-1.jpg');
   }
 
   &--chocolate {
     background-color: #392013;
+    background-image: url('../img/promotion-2.jpg');
   }
 }
 
@@ -20,7 +26,7 @@
 }
 
 .promotion__description {
-  margin-bottom: 25px;
+  margin: 0;
 
   font-weight: 700;
   font-size: 18px;
