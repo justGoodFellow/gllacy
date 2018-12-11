@@ -6,8 +6,8 @@
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
   "scripts": {
     "test": "editorconfig-tools check *",
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "build": "gulp",
+    "start": "gulp && gulp serve"
   },
   "engines": {
     "node": "8.14.0"
@@ -18,9 +18,9 @@
     "css-mqpacker": "^7.0.0",
     "del": "^3.0.0",
     "editorconfig-tools": "^0.1.1",
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-config-htmlacademy": "^0.5.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -32,7 +32,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-svgmin": "^2.0.0",
     "gulp-svgstore": "^7.0.0",
-    "run-sequence": "^2.2.1",
     "stylelint-config-htmlacademy": "^0.1.1"
   }
 }
