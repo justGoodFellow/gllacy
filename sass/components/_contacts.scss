@@ -10,6 +10,7 @@
   position: absolute;
   top: calc((428px - 300px) / 2);
   right: 0;
+  z-index: 1;
 
   box-sizing: border-box;
   width: 300px;
@@ -112,6 +113,20 @@ textarea.feedback__field {
   &:hover,
   &:focus {
     opacity: 0.5;
+  }
+}
+
+.contacts__map {
+  position: relative;
+
+  iframe {
+    position: absolute;
+
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+
+    border: none;
   }
 }
 
