@@ -51,7 +51,7 @@
   position: fixed;
   top: calc(50% - 440px / 2);
   left: calc(50% - 480px / 2);
-  z-index: 2;
+  z-index: 3;
 
   display: none;
   box-sizing: border-box;
@@ -64,6 +64,16 @@
 
   background-color: $gray--light;
   border-radius: 10px;
+
+  &--show {
+    display: block;
+
+    animation: bounce 0.6s;
+  }
+
+  &--error {
+    animation: shake 0.6s;
+  }
 }
 
 .feedback__title {

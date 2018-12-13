@@ -320,17 +320,17 @@ html(lang='ru')
                   label
                     span.visually-hidden
                       | Имя
-                    input.feedback__field.field(type='text', placeholder='Как вас зовут?')
+                    input.feedback__field.field(type='text', name='name', placeholder='Как вас зовут?')
                 .feedback__item
                   label
                     span.visually-hidden
                       | Электронная почта
-                    input.feedback__field.field(type='email', placeholder='Ваша почта для ответа?')
+                    input.feedback__field.field(type='email', name='email', placeholder='Ваша почта для ответа?')
                 .feedback__item
                   label
                     span.visually-hidden
                       | Поле для текста
-                    textarea.feedback__field.field(placeholder='Напишите что-нибудь...')
+                    textarea.feedback__field.field(name='message', placeholder='Напишите что-нибудь...')
               button.feedback__send.btn(type='submit')
                 | Отправить
             button.feedback__close(type='button')
