@@ -34,7 +34,7 @@
     background-image: url('../img/slide-3.png');
   }
 
-  &:first-child {
+  &--active {
     display: block;
   }
 }
@@ -66,7 +66,7 @@
   display: flex;
 }
 
-.slider__controls-item {
+.slider__control-item {
   width: 20px;
   height: 20px;
   margin-right: 5px;

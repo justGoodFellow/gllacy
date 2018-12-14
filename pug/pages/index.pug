@@ -8,7 +8,7 @@ html(lang='ru')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     link(href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic', rel='stylesheet')
     link(rel='stylesheet', href='css/style.min.css')
-  body.index
+  body.index.index--1
     header.page-header
       .page-header__wrapper
         .page-header__container
@@ -106,7 +106,7 @@ html(lang='ru')
             h2.visually-hidden
               | Два мороженых
             .slider__slides
-              .slider__slide.slide
+              .slider__slide.slide.slide--active
                 h3.slide__title
                   | Крем-брюле и пломбир с малиновым джемом
                 a.slide__link.btn(href='#')
@@ -122,13 +122,13 @@ html(lang='ru')
                 a.slide__link.btn(href='#')
                   | Давайте оба!
             .slider__controls
-                button.slider__controls-item(type='button', disabled)
+                button.slider__control-item(type='button', disabled)
                   span.visually-hidden
                     | 1
-                button.slider__controls-item(type='button')
+                button.slider__control-item(type='button')
                   span.visually-hidden
                     | 2
-                button.slider__controls-item(type='button')
+                button.slider__control-item(type='button')
                   span.visually-hidden
                     | 3
         section.promotions
