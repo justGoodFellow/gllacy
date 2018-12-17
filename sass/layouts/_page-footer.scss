@@ -6,6 +6,10 @@
 
 .page-footer__wrapper {
   @include wrapper;
+}
+
+.page-footer__container {
+  @include container;
 
   display: flex;
   justify-content: space-between;
@@ -14,6 +18,7 @@
 
 .page-footer__column {
   display: flex;
+  flex-shrink: 0;
   width: 23.26%;
 
   &--middle {
@@ -30,11 +35,19 @@
   @include list-reset;
 }
 
+.social-links__item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 .social-links__link {
   display: block;
   width: 32px;
   height: 32px;
-  margin-right: 17px;
+  margin: 3px;
 
   background-repeat: no-repeat;
   background-position: 50%;
@@ -77,10 +90,12 @@
 .footer-nav__list {
   @include list-reset;
 
+  display: block;
   flex-direction: column;
+  padding-left: 20px;
 
   &:first-child {
-    margin-right: 30px;
+    margin-right: 10px;
   }
 }
 
@@ -95,8 +110,8 @@
     &::before {
       content: '';
       position: absolute;
-      left: -20px;
       top: 0;
+      left: -20px;
 
       width: 16px;
       height: 15px;
@@ -113,7 +128,15 @@
 }
 
 .copyright__logo {
+  display: block;
+
   svg {
+    display: block;
+
     fill: white;
   }
+}
+
+.copyright__description {
+  margin: 5px 0;
 }

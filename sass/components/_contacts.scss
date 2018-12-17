@@ -2,6 +2,10 @@
   @include wrapper;
 }
 
+.contacts__container {
+  @include container;
+}
+
 .contacts__inner {
   position: relative;
 }
@@ -57,7 +61,7 @@
   box-sizing: border-box;
   width: 480px;
   min-height: 440px;
-  padding: 20px 25px;
+  padding: 15px 25px;
   padding-bottom: 30px;
 
   color: $gray--dark;
@@ -78,6 +82,8 @@
 
 .feedback__title {
   margin-top: 0;
+  margin-bottom: 20px;
+  padding-right: 15px;
 
   font-size: 24px;
 }

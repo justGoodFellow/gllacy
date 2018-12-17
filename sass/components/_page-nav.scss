@@ -1,0 +1,19 @@
+.page-nav__list {
+  @include list-reset;
+
+  font-size: 14px;
+}
+
+.page-nav__item {
+  &:not(:last-child) {
+    display: flex;
+    align-items: center;
+    margin-right: 7px;
+
+    &::after {
+      content: '\00BB';
+
+      margin-left: 7px;
+    }
+  }
+}

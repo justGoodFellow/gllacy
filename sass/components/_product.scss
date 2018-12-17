@@ -4,9 +4,9 @@
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
-  width: 23.25%;
-  margin-right: 2.32%;
-  margin-bottom: 10px;
+  width: 23.32%;
+  margin-right: 2.2%;
+  margin-bottom: 7px;
 
   text-align: center;
 
@@ -81,8 +81,11 @@
 }
 
 .product__img-wrap {
+  margin-bottom: 13px;
+
   img {
     display: block;
+    min-height: 199px;
 
     border-radius: 50%;
   }
@@ -106,12 +109,13 @@
 
 .product__title {
   height: 70px;
-  margin: 10px 0;
+  margin: 5px 0;
+  padding: 0 1.9%;
   overflow: hidden;
 
-  text-align: center;
-  line-height: 22px;
   font-size: 16px;
+  line-height: 22px;
+  text-align: center;
 }
 
 .product__link {
@@ -121,5 +125,6 @@
 .product__fast-look {
   display: none;
   margin-top: auto;
-  padding: 0 15px;
+  padding-right: 15px;
+  padding-left: 15px;
 }

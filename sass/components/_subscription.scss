@@ -1,4 +1,5 @@
 .subscription {
+  width: 100%;
   padding: 5px;
 
   background-color: $color-red--light;
@@ -34,4 +35,13 @@
 .subscription__wrap {
   flex-grow: 1;
   margin-right: 10px;
+}
+
+.subscription__field {
+  width: 100%;
+}
+
+.subscription__submit {
+  padding-right: 19px;
+  padding-left: 19px;
 }

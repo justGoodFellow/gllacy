@@ -3,11 +3,14 @@
   width: 100%;
   padding: 13px 15px;
 
+  font-weight: 700;
   color: $gray--dark;
 
   border: none;
   border-radius: 5px;
   box-shadow: inset 0 0 0 1px $gray;
+
+  appearance: none;
 
   &:hover {
     box-shadow: inset 0 0 0 2px #c7c6c5;
@@ -20,5 +23,10 @@
 
   &::placeholder {
     font-weight: 400;
+  }
+
+  &:-ms-input-placeholder {
+    font-weight: 400;
+    color: #999999;
   }
 }

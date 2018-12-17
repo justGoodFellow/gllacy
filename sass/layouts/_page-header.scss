@@ -1,27 +1,44 @@
+.page-header {
+  margin-bottom: 5px;
+}
+
 .page-header__wrapper {
   @include wrapper;
 }
 
+.page-header__container {
+  @include container;
+}
+
 .page-header__row {
-  &--top {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
 
   &--bottom {
+    justify-content: space-between;
+    align-items: flex-end;
+
     text-align: right;
   }
 }
 
 .page-header__logo {
+  margin-top: 10px;
   margin-right: 10px;
 }
 
+.page-header__main-nav {
+  margin-top: 23px;
+}
+
 .page-header__menu {
+  margin-top: 23px;
   margin-left: auto;
 }
 
 .page-header__phone {
+  margin: 0;
+  margin-left: auto;
+
   font-weight: 700;
   font-size: 14px;
 }
