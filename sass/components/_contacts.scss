@@ -2,6 +2,10 @@
   @include wrapper;
 }
 
+.contacts__container {
+  @include container;
+}
+
 .contacts__inner {
   position: relative;
 }

@@ -6,6 +6,10 @@
 
 .page-footer__wrapper {
   @include wrapper;
+}
+
+.page-footer__container {
+  @include container;
 
   display: flex;
   justify-content: space-between;
@@ -95,8 +99,8 @@
     &::before {
       content: '';
       position: absolute;
-      left: -20px;
       top: 0;
+      left: -20px;
 
       width: 16px;
       height: 15px;
@@ -113,6 +117,8 @@
 }
 
 .copyright__logo {
+  display: block;
+
   svg {
     fill: white;
   }

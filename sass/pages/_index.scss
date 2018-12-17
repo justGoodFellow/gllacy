@@ -2,6 +2,10 @@
   @include wrapper;
 }
 
+.main__container {
+  @include container;
+}
+
 .main__row {
   display: flex;
   flex-wrap: wrap;
@@ -10,8 +14,8 @@
 .main__column {
   display: flex;
   flex-shrink: 0;
-  width: 48.83%;
-  margin-right: 2.34%;
+  width: 48.9%;
+  margin-right: 2.2%;
   margin-bottom: 27px;
 
   &:nth-child(2n) {
@@ -51,9 +55,7 @@
     left: 0;
     z-index: 2;
 
-    box-sizing: border-box;
     width: 100%;
-    padding: 0 27px;
   }
 
   .slider {
@@ -73,7 +75,7 @@
   }
 
   .slider__controls {
-    left: 27px;
+    left: 2.3%;
   }
 
   .info {

@@ -3,508 +3,510 @@ extends ../layouts/base.pug
 block content
   header.page-header
     .page-header__wrapper
-      .page-header__row.page-header__row--top
-        a.page-header__logo.logo(href='index.html', aria-label='Главная страница')
-          svg(width='154', height='64', aria-label='Логотип Глейси')
-            use(xlink:href='img/symbols.svg#logo')
-        nav.main-nav
-          ul.main-nav__items.main-nav__items--main
-            li.main-nav__item.dropdown
-              a.page-header__dropdown-toggle.main-nav__link.main-nav__link--active(href='#')
-                | Каталог
+      .page-header__container
+        .page-header__row.page-header__row--top
+          a.page-header__logo.logo(href='index.html', aria-label='Главная страница')
+            svg(width='154', height='64', aria-label='Логотип Глейси')
+              use(xlink:href='img/symbols.svg#logo')
+          nav.main-nav
+            ul.main-nav__items.main-nav__items--main
+              li.main-nav__item.dropdown
+                a.page-header__dropdown-toggle.main-nav__link.main-nav__link--active(href='#')
+                  | Каталог
+                .dropdown__menu
+                  .dropdown__menu-inner
+                    ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
+                      li.main-nav__item
+                        a.main-nav__link(href='#')
+                          | Новинки
+                    ul.main-nav__items.main-nav__items--lvl2
+                      li.main-nav__item
+                        a.main-nav__link
+                          | Сливочное
+                      li.main-nav__item
+                        a.main-nav__link(href='#')
+                          | Щербеты
+                      li.main-nav__item
+                        a.main-nav__link(href='#')
+                          | Фруктовый лед
+                      li.main-nav__item
+                        a.main-nav__link(href='#')
+                          | Мелорин
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Доставка и оплата
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | О Компании
+          .page-header__menu.header-menu
+            .dropdown
+              a.dropdown__toggle.header-menu__link.header-menu__link--search(href='#')
+                svg(width='17', height='17')
+                  use(xlink:href='img/symbols.svg#icon-loupe')
+                span.visually-hidden
+                  | Поиск
               .dropdown__menu
                 .dropdown__menu-inner
-                  ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
-                    li.main-nav__item
-                      a.main-nav__link(href='#')
-                        | Новинки
-                  ul.main-nav__items.main-nav__items--lvl2
-                    li.main-nav__item
-                      a.main-nav__link
-                        | Сливочное
-                    li.main-nav__item
-                      a.main-nav__link(href='#')
-                        | Щербеты
-                    li.main-nav__item
-                      a.main-nav__link(href='#')
-                        | Фруктовый лед
-                    li.main-nav__item
-                      a.main-nav__link(href='#')
-                        | Мелорин
-            li.main-nav__item
-              a.main-nav__link(href='#')
-                | Доставка и оплата
-            li.main-nav__item
-              a.main-nav__link(href='#')
-                | О Компании
-        .page-header__menu.header-menu
-          .dropdown
-            a.dropdown__toggle.header-menu__link.header-menu__link--search(href='#')
-              svg(width='17', height='17')
-                use(xlink:href='img/symbols.svg#icon-loupe')
-              span.visually-hidden
-                | Поиск
-            .dropdown__menu
-              .dropdown__menu-inner
-                form.header-menu__search(action='#', method='post')
-                  label
-                    span.visually-hidden
-                      | Поле поиска
-                    input.field(type='search', placeholder='Что ищем?')
-          .dropdown
-            a.dropdown__toggle.header-menu__link(href='#')
-              svg(width='21', height='19')
-                use(xlink:href='img/symbols.svg#icon-entrance')
-              | Вход
-            .dropdown__menu
-              .dropdown__menu-inner
-                form.header-menu__login.login(action='#', method='post')
-                  label
-                    span.visually-hidden
-                      | Электронная почта
-                    input.field.login__field(type='email', placeholder='Электронная почта')
-                  label
-                    span.visually-hidden
-                      | Пароль
-                    input.field.login__field(type='password', placeholder='Пароль')
-                  .login__footer
-                    button.login__submit.btn(type='submit')
-                      | Войти
-                    p.login__links
-                      a.login__link(href='#')
-                        | Забыли пароль?
-                      br
-                      a.login__link(href='#')
-                        | Новая регистрация
-          .dropdown
-            a.dropdown__toggle.header-menu__link.header-menu__link--basket-active(href='#')
-              svg(width='21', height='20')
-                use(xlink:href='img/symbols.svg#icon-basket')
-              span
-                | 2
-              | &nbsp;
-              span
-                | товара
-            .dropdown__menu
-              .dropdown__menu-inner
-                .header-menu__basket.mini-basket
-                  table.mini-basket__items
-                    tbody
-                      tr.mini-basket__item
-                        td.mini-basket__item-cansel
-                          button(type='button')
-                            span.visually-hidden
-                              | Убрать
-                        td.mini-basket__item-img
-                          img(src='img/product-1.jpg', width='33', height='33', alt='')
-                        td.mini-basket__item-desc
-                          | Пломбир с апельсиновым джемом
-                        td.mini-basket__count
-                          | 1,5 кг х
-                          |
-                          span.header-menu__basket-price
-                            | 200 руб.
-                        td
-                          | 300 руб.
-                      tr.mini-basket__item
-                        td.mini-basket__item-cansel
-                          button(type='button')
-                            span.visually-hidden
-                              | Убрать
-                        td.mini-basket__item-img
-                          img(src='img/product-3.jpg', width='33', height='33', alt='')
-                        td.mini-basket__desc
-                          | Клубничный пломбир с присыпкой из белого шоколада
-                        td.mini-basket__count
-                          | 1,5 кг х
-                          |
-                          span.header-menu__basket-price
+                  form.header-menu__search(action='#', method='post')
+                    label
+                      span.visually-hidden
+                        | Поле поиска
+                      input.field(type='search', placeholder='Что ищем?')
+            .dropdown
+              a.dropdown__toggle.header-menu__link(href='#')
+                svg(width='21', height='19')
+                  use(xlink:href='img/symbols.svg#icon-entrance')
+                | Вход
+              .dropdown__menu
+                .dropdown__menu-inner
+                  form.header-menu__login.login(action='#', method='post')
+                    label
+                      span.visually-hidden
+                        | Электронная почта
+                      input.field.login__field(type='email', placeholder='Электронная почта')
+                    label
+                      span.visually-hidden
+                        | Пароль
+                      input.field.login__field(type='password', placeholder='Пароль')
+                    .login__footer
+                      button.login__submit.btn(type='submit')
+                        | Войти
+                      p.login__links
+                        a.login__link(href='#')
+                          | Забыли пароль?
+                        br
+                        a.login__link(href='#')
+                          | Новая регистрация
+            .dropdown
+              a.dropdown__toggle.header-menu__link.header-menu__link--basket-active(href='#')
+                svg(width='21', height='20')
+                  use(xlink:href='img/symbols.svg#icon-basket')
+                span
+                  | 2
+                | &nbsp;
+                span
+                  | товара
+              .dropdown__menu
+                .dropdown__menu-inner
+                  .header-menu__basket.mini-basket
+                    table.mini-basket__items
+                      tbody
+                        tr.mini-basket__item
+                          td.mini-basket__item-cansel
+                            button(type='button')
+                              span.visually-hidden
+                                | Убрать
+                          td.mini-basket__item-img
+                            img(src='img/product-1.jpg', width='33', height='33', alt='')
+                          td.mini-basket__item-desc
+                            | Пломбир с апельсиновым джемом
+                          td.mini-basket__count
+                            | 1,5 кг х
+                            |
+                            span.header-menu__basket-price
+                              | 200 руб.
+                          td
                             | 300 руб.
-                        td
-                          | 450 руб.
-                    tfoot
-                      tr
-                        td(colspan='5')
-                          | Итого:
-                          |
-                          span
-                            | 750
-                          |
-                          | руб.
-                  a.header-menu__basket-submit.btn(href='#')
-                    | Оформить заказ
-      .page-header__row.page-header__row--bottom
-        p.page-header__phone
-          | с 10 до 20, ежедневно
-          br
-          a.page-header__phone-number(href='tel:88124502525')
-            | 8 812 450-25-25
+                        tr.mini-basket__item
+                          td.mini-basket__item-cansel
+                            button(type='button')
+                              span.visually-hidden
+                                | Убрать
+                          td.mini-basket__item-img
+                            img(src='img/product-3.jpg', width='33', height='33', alt='')
+                          td.mini-basket__desc
+                            | Клубничный пломбир с присыпкой из белого шоколада
+                          td.mini-basket__count
+                            | 1,5 кг х
+                            |
+                            span.header-menu__basket-price
+                              | 300 руб.
+                          td
+                            | 450 руб.
+                      tfoot
+                        tr
+                          td(colspan='5')
+                            | Итого:
+                            |
+                            span
+                              | 750
+                            |
+                            | руб.
+                    a.header-menu__basket-submit.btn(href='#')
+                      | Оформить заказ
+        .page-header__row.page-header__row--bottom
+          p.page-header__phone
+            | с 10 до 20, ежедневно
+            br
+            a.page-header__phone-number(href='tel:88124502525')
+              | 8 812 450-25-25
   .catalog
     .catalog__wrapper
       .catalog__container
-        nav.page-nav
-          ul.page-nav__list
-            li.page-nav__item
-              a.page-nav__link(href='index.html')
-                | Главная
-            li.page-nav__item
-              a.page-nav__link(href='#')
-                | Каталог
-            li.page-nav__item
-              | Сливочное
-        h1.catalog__title
-          | Сливочное мороженое
-        form.catalog__form(action='#', method='get')
-          .catalog__form-row
-            fieldset.catalog__filters-group
-              legend.catalog__filters-title
-                | Сортировка:
-              .catalog__filters-inner
-                .catalog__select
-                  select.catalog__select-picker
-                    option
-                      | по популярности
-                    option
-                      | сначала недорогие
-                    option
-                      | сначала дорогие
-                    option
-                      | по жирности
-            fieldset.catalog__filters-group
-              legend.catalog__filters-title
-                | Цена:
-                |
-                span.visually-hidden
-                  | От
-                span
-                  | 100
-                |
-                | руб. -
-                |
-                span.visually-hidden
-                  | До
-                span
-                  | 500
-                |
-                | руб.
-              .catalog__filters-inner
-                .range-filter
-                  .range-filter__scale
-                    .range-filter__bar(style='margin-left: 10%; width: 60%;')
-                    .range-filter__toggle.range-filter__min-toggle
-                    .range-filter__toggle.range-filter__max-toggle
-            fieldset.catalog__filters-group
-              legend.catalog__filters-title
-                | Жирность:
-              .catalog__filters-inner
-                .radiobox
-                  input.radiobox__input(type='radio', id='zero', name='fat-content')
-                  label.radiobox__label(for='zero')
+        .catalog__inner
+          nav.page-nav
+            ul.page-nav__list
+              li.page-nav__item
+                a.page-nav__link(href='index.html')
+                  | Главная
+              li.page-nav__item
+                a.page-nav__link(href='#')
+                  | Каталог
+              li.page-nav__item
+                | Сливочное
+          h1.catalog__title
+            | Сливочное мороженое
+          form.catalog__form(action='#', method='get')
+            .catalog__form-row
+              fieldset.catalog__filters-group
+                legend.catalog__filters-title
+                  | Сортировка:
+                .catalog__filters-inner
+                  .catalog__select
+                    select.catalog__select-picker
+                      option
+                        | по популярности
+                      option
+                        | сначала недорогие
+                      option
+                        | сначала дорогие
+                      option
+                        | по жирности
+              fieldset.catalog__filters-group
+                legend.catalog__filters-title
+                  | Цена:
+                  |
+                  span.visually-hidden
+                    | От
+                  span
+                    | 100
+                  |
+                  | руб. -
+                  |
+                  span.visually-hidden
+                    | До
+                  span
+                    | 500
+                  |
+                  | руб.
+                .catalog__filters-inner
+                  .range-filter
+                    .range-filter__scale
+                      .range-filter__bar(style='margin-left: 10%; width: 60%;')
+                      .range-filter__toggle.range-filter__min-toggle
+                      .range-filter__toggle.range-filter__max-toggle
+              fieldset.catalog__filters-group
+                legend.catalog__filters-title
+                  | Жирность:
+                .catalog__filters-inner
+                  .radiobox
+                    input.radiobox__input(type='radio', id='zero', name='fat-content')
+                    label.radiobox__label(for='zero')
+                      span
+                        | 0%
+                  .radiobox
+                    input.radiobox__input(type='radio', id='to-10', name='fat-content', checked)
+                    label.radiobox__label(for='to-10')
+                      span
+                        | До 10%
+                  .radiobox
+                    input.radiobox__input(type='radio', id='to-30', name='fat-content')
+                    label.radiobox__label(for='to-30')
+                      span
+                        | До 30%
+                  .radiobox
+                    input.radiobox__input(type='radio', id='above-30', name='fat-content')
+                    label.radiobox__label(for='above-30')
+                      span
+                        | Выше 30%
+            .catalog__form-row
+              fieldset.catalog__filters-group
+                legend.catalog__filters-title
+                  | Наполнители:
+                .catalog__filters-inner
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='chocolate', checked)
+                    label.checkbox__label(for='chocolate')
+                      | шоколадные
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='sugar-powders', checked)
+                    label.checkbox__label(for='sugar-powders')
+                      | сахарные присыпки
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='fruit')
+                    label.checkbox__label(for='fruit')
+                      | фрукты
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='syrups')
+                    label.checkbox__label(for='syrups')
+                      | сиропы
+                  .checkbox
+                    input.checkbox__input(type='checkbox', id='jams')
+                    label.checkbox__label(for='jams')
+                      | джемы
+              button.catalog__filters-submit(type='submit')
+                | Применить
+          .catalog__items
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-1.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 310
                     span
-                      | 0%
-                .radiobox
-                  input.radiobox__input(type='radio', id='to-10', name='fat-content', checked)
-                  label.radiobox__label(for='to-10')
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочное с апельсиновым джемом и цитрусовой стружкой
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-2.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 380
                     span
-                      | До 10%
-                .radiobox
-                  input.radiobox__input(type='radio', id='to-30', name='fat-content')
-                  label.radiobox__label(for='to-30')
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочно-кофейное с кусочками шоколада
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-3.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 355
                     span
-                      | До 30%
-                .radiobox
-                  input.radiobox__input(type='radio', id='above-30', name='fat-content')
-                  label.radiobox__label(for='above-30')
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочно-клубничное с присыпкой из белого шоколада
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-4.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 415
                     span
-                      | Выше 30%
-          .catalog__form-row
-            fieldset.catalog__filters-group
-              legend.catalog__filters-title
-                | Наполнители:
-              .catalog__filters-inner
-                .checkbox
-                  input.checkbox__input(type='checkbox', id='chocolate', checked)
-                  label.checkbox__label(for='chocolate')
-                    | шоколадные
-                .checkbox
-                  input.checkbox__input(type='checkbox', id='sugar-powders', checked)
-                  label.checkbox__label(for='sugar-powders')
-                    | сахарные присыпки
-                .checkbox
-                  input.checkbox__input(type='checkbox', id='fruit')
-                  label.checkbox__label(for='fruit')
-                    | фрукты
-                .checkbox
-                  input.checkbox__input(type='checkbox', id='syrups')
-                  label.checkbox__label(for='syrups')
-                    | сиропы
-                .checkbox
-                  input.checkbox__input(type='checkbox', id='jams')
-                  label.checkbox__label(for='jams')
-                    | джемы
-            button.catalog__filters-submit(type='submit')
-              | Применить
-        .catalog__items
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-1.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 310
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочное с апельсиновым джемом и цитрусовой стружкой
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-2.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 380
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочно-кофейное с кусочками шоколада
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-3.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 355
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочно-клубничное с присыпкой из белого шоколада
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-4.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 415
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочное крем-брюле с карамельной подливкой
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-5.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 325
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочное с брусничным джемом
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-6.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 410
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочно-черничное с цельными ягодами черники
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-7.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 375
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочно-лимонное с карамельной присыпкой
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-8.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 320
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочное с шоколадной стружкой
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-9.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 440
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочно-ванильное с кусочками шоколада
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-10.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 435
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочноe с ментоловым сиропом
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-11.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 355
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочное с кусочками черного шоколада
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-          .product
-            .product__container
-              .product__inner
-                .product__img-wrap
-                  img(src='img/product-12.jpg', width='267', height='267', alt='')
-                p.product__price.price
-                  span.price__number
-                    | 420
-                  span
-                    |
-                    | &#8381;
-                  span.visually-hidden
-                    | рублей
-                  span.price__measure
-                    | /кг
-              h2.product__title
-                a.product__link(href='#')
-                  | Сливочное с мятным сиропом
-              a.product__fast-look.btn(href='#')
-                | Быстрый просмотр
-        .catalog__nav.catalog-nav
-          button.catalog-nav__arrow.catalog-nav__arrow--prev(type='button', disabled)
-            span.visually-hidden
-              | Назад
-          ul.catalog-nav__items
-            li.catalog-nav__item
-              button.catalog-nav__btn(type='button', disabled)
-                | 1
-            li.catalog-nav__item
-              button.catalog-nav__btn(type='button')
-                | 2
-            li.catalog-nav__item
-              button.catalog-nav__btn(type='button')
-                | 3
-            li.catalog-nav__item
-              button.catalog-nav__btn(type='button')
-                | 4
-            li.catalog-nav__item
-              button.catalog-nav__btn(type='button')
-                | 5
-          button.catalog-nav__arrow.catalog-nav__arrow--next(type='button')
-            span.visually-hidden
-              | Вперед
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочное крем-брюле с карамельной подливкой
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-5.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 325
+                    span
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочное с брусничным джемом
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-6.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 410
+                    span
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочно-черничное с цельными ягодами черники
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-7.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 375
+                    span
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочно-лимонное с карамельной присыпкой
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-8.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 320
+                    span
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочное с шоколадной стружкой
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-9.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 440
+                    span
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочно-ванильное с кусочками шоколада
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-10.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 435
+                    span
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочноe с ментоловым сиропом
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-11.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 355
+                    span
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочное с кусочками черного шоколада
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+            .product
+              .product__container
+                .product__inner
+                  .product__img-wrap
+                    img(src='img/product-12.jpg', width='267', height='267', alt='')
+                  p.product__price.price
+                    span.price__number
+                      | 420
+                    span
+                      |
+                      | &#8381;
+                    span.visually-hidden
+                      | рублей
+                    span.price__measure
+                      | /кг
+                h2.product__title
+                  a.product__link(href='#')
+                    | Сливочное с мятным сиропом
+                a.product__fast-look.btn(href='#')
+                  | Быстрый просмотр
+          .catalog__nav.catalog-nav
+            button.catalog-nav__arrow.catalog-nav__arrow--prev(type='button', disabled)
+              span.visually-hidden
+                | Назад
+            ul.catalog-nav__items
+              li.catalog-nav__item
+                button.catalog-nav__btn(type='button', disabled)
+                  | 1
+              li.catalog-nav__item
+                button.catalog-nav__btn(type='button')
+                  | 2
+              li.catalog-nav__item
+                button.catalog-nav__btn(type='button')
+                  | 3
+              li.catalog-nav__item
+                button.catalog-nav__btn(type='button')
+                  | 4
+              li.catalog-nav__item
+                button.catalog-nav__btn(type='button')
+                  | 5
+            button.catalog-nav__arrow.catalog-nav__arrow--next(type='button')
+              span.visually-hidden
+                | Вперед

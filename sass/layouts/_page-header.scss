@@ -2,6 +2,10 @@
   @include wrapper;
 }
 
+.page-header__container {
+  @include container;
+}
+
 .page-header__row {
   &--top {
     display: flex;

@@ -1,9 +1,13 @@
 .catalog__wrapper {
   @include wrapper;
+}
 
-  .catalog__container {
-    border-bottom: 1px solid rgba(white, 0.3);
-  }
+.catalog__container {
+  @include container;
+}
+
+.catalog__inner {
+  border-bottom: 1px solid rgba(white, 0.3);
 }
 
 .page-nav__list {
