@@ -81,6 +81,7 @@
 .footer-nav__list {
   @include list-reset;
 
+  display: block;
   flex-direction: column;
 
   &:first-child {
