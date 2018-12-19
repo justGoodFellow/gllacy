@@ -83,6 +83,7 @@
 .product__img-wrap {
   img {
     display: block;
+    min-height: 199px;
 
     border-radius: 50%;
   }
@@ -121,5 +122,6 @@
 .product__fast-look {
   display: none;
   margin-top: auto;
-  padding: 0 15px;
+  padding-right: 15px;
+  padding-left: 15px;
 }

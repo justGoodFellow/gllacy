@@ -18,6 +18,7 @@
 
 .page-footer__column {
   display: flex;
+  flex-shrink: 0;
   width: 23.26%;
 
   &--middle {
@@ -34,11 +35,19 @@
   @include list-reset;
 }
 
+.social-links__item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
 .social-links__link {
   display: block;
   width: 32px;
   height: 32px;
-  margin-right: 17px;
+  margin: 3px;
 
   background-repeat: no-repeat;
   background-position: 50%;
@@ -83,9 +92,10 @@
 
   display: block;
   flex-direction: column;
+  padding-left: 20px;
 
   &:first-child {
-    margin-right: 30px;
+    margin-right: 10px;
   }
 }
 

@@ -9,7 +9,6 @@
 .page-header__row {
   &--top {
     display: flex;
-    align-items: center;
   }
 
   &--bottom {
@@ -18,10 +17,16 @@
 }
 
 .page-header__logo {
+  margin-top: 10px;
   margin-right: 10px;
 }
 
+.page-header__main-nav {
+  margin-top: 23px;
+}
+
 .page-header__menu {
+  margin-top: 23px;
   margin-left: auto;
 }
 

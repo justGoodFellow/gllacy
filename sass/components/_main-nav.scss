@@ -46,16 +46,14 @@
   }
 }
 
-.main-nav {
-  .dropdown__menu {
-    left: 0;
+.main-nav .dropdown__menu {
+  left: 0;
 
-    min-width: 145px;
-  }
+  min-width: 145px;
+}
 
-  .dropdown__menu-inner {
-    padding: 5px 0;
-  }
+.main-nav .dropdown__menu-inner {
+  padding: 5px 0;
 }
 
 .main-nav__items--lvl2 {
