@@ -1,4 +1,9 @@
-.radiobox,
+.radiobox {
+  &:not(:last-child) {
+    margin-right: 18px;
+  }
+}
+
 .checkbox {
   &:not(:last-child) {
     margin-right: 20px;

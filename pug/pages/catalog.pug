@@ -92,7 +92,7 @@ block content
                     table.mini-basket__items
                       tbody
                         tr.mini-basket__item
-                          td.mini-basket__item-cansel
+                          td.mini-basket__item-cancel
                             button(type='button')
                               span.visually-hidden
                                 | Убрать
@@ -108,7 +108,7 @@ block content
                           td
                             | 300 руб.
                         tr.mini-basket__item
-                          td.mini-basket__item-cansel
+                          td.mini-basket__item-cancel
                             button(type='button')
                               span.visually-hidden
                                 | Убрать
@@ -135,15 +135,6 @@ block content
                     a.header-menu__basket-submit.btn(href='#')
                       | Оформить заказ
         .page-header__row.page-header__row--bottom
-          p.page-header__phone
-            | с 10 до 20, ежедневно
-            br
-            a.page-header__phone-number(href='tel:88124502525')
-              | 8 812 450-25-25
-  .catalog
-    .catalog__wrapper
-      .catalog__container
-        .catalog__inner
           nav.page-nav
             ul.page-nav__list
               li.page-nav__item
@@ -154,6 +145,15 @@ block content
                   | Каталог
               li.page-nav__item
                 | Сливочное
+          p.page-header__phone
+            | с 10 до 20, ежедневно
+            br
+            a.page-header__phone-number(href='tel:88124502525')
+              | 8 812 450-25-25
+  .catalog
+    .catalog__wrapper
+      .catalog__container
+        .catalog__inner
           h1.catalog__title
             | Сливочное мороженое
           form.catalog__form(action='#', method='get')
@@ -161,7 +161,7 @@ block content
               fieldset.catalog__filters-group
                 legend.catalog__filters-title
                   | Сортировка:
-                .catalog__filters-inner
+                .catalog__filters-inner.catalog__filters-inner--select
                   .catalog__select
                     select.catalog__select-picker
                       option
@@ -488,25 +488,25 @@ block content
                 a.product__fast-look.btn(href='#')
                   | Быстрый просмотр
           .catalog__nav.catalog-nav
-            button.catalog-nav__arrow.catalog-nav__arrow--prev(type='button', disabled)
+            a.catalog-nav__arrow.catalog-nav__arrow--prev
               span.visually-hidden
                 | Назад
             ul.catalog-nav__items
               li.catalog-nav__item
-                button.catalog-nav__btn(type='button', disabled)
+                a.catalog-nav__btn
                   | 1
               li.catalog-nav__item
-                button.catalog-nav__btn(type='button')
+                a.catalog-nav__btn(href='#')
                   | 2
               li.catalog-nav__item
-                button.catalog-nav__btn(type='button')
+                a.catalog-nav__btn(href='#')
                   | 3
               li.catalog-nav__item
-                button.catalog-nav__btn(type='button')
+                a.catalog-nav__btn(href='#')
                   | 4
               li.catalog-nav__item
-                button.catalog-nav__btn(type='button')
+                a.catalog-nav__btn(href='#')
                   | 5
-            button.catalog-nav__arrow.catalog-nav__arrow--next(type='button')
+            a.catalog-nav__arrow.catalog-nav__arrow--next(href='#')
               span.visually-hidden
                 | Вперед

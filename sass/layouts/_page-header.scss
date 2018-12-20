@@ -1,3 +1,7 @@
+.page-header {
+  margin-bottom: 5px;
+}
+
 .page-header__wrapper {
   @include wrapper;
 }
@@ -7,11 +11,12 @@
 }
 
 .page-header__row {
-  &--top {
-    display: flex;
-  }
+  display: flex;
 
   &--bottom {
+    justify-content: space-between;
+    align-items: flex-end;
+
     text-align: right;
   }
 }
@@ -31,6 +36,9 @@
 }
 
 .page-header__phone {
+  margin: 0;
+  margin-left: auto;
+
   font-weight: 700;
   font-size: 14px;
 }

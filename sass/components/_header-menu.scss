@@ -49,6 +49,9 @@
   }
 
   &--basket-empty {
+    box-sizing: border-box;
+    min-width: 117px;
+
     svg {
       color: transparent;
     }
@@ -89,9 +92,14 @@
 
 .login__footer {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
+}
+
+.login__links {
+  margin: 0;
 }
 
 .login__link {

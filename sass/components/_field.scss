@@ -24,4 +24,9 @@
   &::placeholder {
     font-weight: 400;
   }
+
+  &:-ms-input-placeholder {
+    font-weight: 400;
+    color: #999999;
+  }
 }
