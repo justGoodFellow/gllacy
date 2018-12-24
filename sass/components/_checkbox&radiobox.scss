@@ -23,6 +23,8 @@
   text-transform: lowercase;
   white-space: nowrap;
 
+  cursor: pointer;
+
   user-select: none;
 
   &::before {
