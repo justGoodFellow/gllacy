@@ -4,7 +4,7 @@
   "disallowHtmlText": true,
   "disallowMultipleLineBreaks": true,
   "disallowSpacesInsideAttributeBrackets": true,
-  "maximumLineLength": 80,
+  // "maximumLineLength": 80,
   "requireClassLiteralsBeforeAttributes": true,
   "requireLowerCaseAttributes": true,
   "requireLowerCaseTags": true,

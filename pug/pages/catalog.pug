@@ -5,13 +5,16 @@ block content
     .page-header__wrapper
       .page-header__container
         .page-header__row.page-header__row--top
-          a.page-header__logo.logo(href='index.html', aria-label='Главная страница')
-            svg(width='154', height='64', aria-label='Логотип Глейси')
+          a.page-header__logo.logo(
+            href='index.html'
+            aria-label='Главная страница')
+            svg(width='154' height='64' aria-label='Логотип Глейси')
               use(xlink:href='img/symbols.svg#logo')
           nav.page-header__main-nav.main-nav
             ul.main-nav__items.main-nav__items--main
               li.main-nav__item.dropdown
-                a.page-header__dropdown-toggle.main-nav__link.main-nav__link--active(href='#')
+                a.page-header__dropdown-toggle.main-nav__link.main-nav__link--active(
+                  href='#')
                   | Каталог
                 .dropdown__menu
                   .dropdown__menu-inner
@@ -40,34 +43,39 @@ block content
                   | О Компании
           .page-header__menu.header-menu
             .dropdown
-              a.dropdown__toggle.header-menu__link.header-menu__link--search(href='#')
-                svg(width='17', height='17')
+              a.dropdown__toggle.header-menu__link.header-menu__link--search(
+                href='#')
+                svg(width='17' height='17')
                   use(xlink:href='img/symbols.svg#icon-loupe')
                 span.visually-hidden
                   | Поиск
               .dropdown__menu
                 .dropdown__menu-inner
-                  form.header-menu__search(action='#', method='post')
+                  form.header-menu__search(action='#' method='post')
                     label
                       span.visually-hidden
                         | Поле поиска
-                      input.field(type='search', placeholder='Что ищем?')
+                      input.field(type='search' placeholder='Что ищем?')
             .dropdown
               a.dropdown__toggle.header-menu__link(href='#')
-                svg(width='21', height='19')
+                svg(width='21' height='19')
                   use(xlink:href='img/symbols.svg#icon-entrance')
                 | Вход
               .dropdown__menu
                 .dropdown__menu-inner
-                  form.header-menu__login.login(action='#', method='post')
+                  form.header-menu__login.login(action='#' method='post')
                     label
                       span.visually-hidden
                         | Электронная почта
-                      input.field.login__field(type='email', placeholder='Электронная почта')
+                      input.field.login__field(
+                        type='email'
+                        placeholder='Электронная почта')
                     label
                       span.visually-hidden
                         | Пароль
-                      input.field.login__field(type='password', placeholder='Пароль')
+                      input.field.login__field(
+                        type='password'
+                        placeholder='Пароль')
                     .login__footer
                       button.login__submit.btn(type='submit')
                         | Войти
@@ -78,8 +86,9 @@ block content
                         a.login__link(href='#')
                           | Новая регистрация
             .dropdown
-              a.dropdown__toggle.header-menu__link.header-menu__link--basket-active(href='#')
-                svg(width='21', height='20')
+              a.dropdown__toggle.header-menu__link.header-menu__link--basket-active(
+                href='#')
+                svg(width='21' height='20')
                   use(xlink:href='img/symbols.svg#icon-basket')
                 span
                   | 2
@@ -97,7 +106,11 @@ block content
                               span.visually-hidden
                                 | Убрать
                           td.mini-basket__item-img
-                            img(src='img/product-1.jpg', width='33', height='33', alt='')
+                            img(
+                              src='img/product-1.jpg'
+                              width='33'
+                              height='33'
+                              alt='')
                           td.mini-basket__item-desc
                             | Пломбир с апельсиновым джемом
                           td.mini-basket__count
@@ -113,7 +126,11 @@ block content
                               span.visually-hidden
                                 | Убрать
                           td.mini-basket__item-img
-                            img(src='img/product-3.jpg', width='33', height='33', alt='')
+                            img(
+                              src='img/product-3.jpg'
+                              width='33'
+                              height='33'
+                              alt='')
                           td.mini-basket__desc
                             | Клубничный пломбир с присыпкой из белого шоколада
                           td.mini-basket__count
@@ -156,102 +173,18 @@ block content
         .catalog__inner
           h1.catalog__title
             | Сливочное мороженое
-          form.catalog__form(action='#', method='get')
-            .catalog__form-row
-              fieldset.catalog__filters-group
-                legend.catalog__filters-title
-                  | Сортировка:
-                .catalog__filters-inner.catalog__filters-inner--select
-                  .catalog__select
-                    select.catalog__select-picker
-                      option
-                        | по популярности
-                      option
-                        | сначала недорогие
-                      option
-                        | сначала дорогие
-                      option
-                        | по жирности
-              fieldset.catalog__filters-group
-                legend.catalog__filters-title
-                  | Цена:
-                  |
-                  span.visually-hidden
-                    | От
-                  span
-                    | 100
-                  |
-                  | руб. -
-                  |
-                  span.visually-hidden
-                    | До
-                  span
-                    | 500
-                  |
-                  | руб.
-                .catalog__filters-inner
-                  .range-filter
-                    .range-filter__scale
-                      .range-filter__bar(style='margin-left: 10%; width: 60%;')
-                      .range-filter__toggle.range-filter__min-toggle
-                      .range-filter__toggle.range-filter__max-toggle
-              fieldset.catalog__filters-group
-                legend.catalog__filters-title
-                  | Жирность:
-                .catalog__filters-inner
-                  .radiobox
-                    input.radiobox__input(type='radio', id='zero', name='fat-content')
-                    label.radiobox__label(for='zero')
-                      span
-                        | 0%
-                  .radiobox
-                    input.radiobox__input(type='radio', id='to-10', name='fat-content', checked)
-                    label.radiobox__label(for='to-10')
-                      span
-                        | До 10%
-                  .radiobox
-                    input.radiobox__input(type='radio', id='to-30', name='fat-content')
-                    label.radiobox__label(for='to-30')
-                      span
-                        | До 30%
-                  .radiobox
-                    input.radiobox__input(type='radio', id='above-30', name='fat-content')
-                    label.radiobox__label(for='above-30')
-                      span
-                        | Выше 30%
-            .catalog__form-row
-              fieldset.catalog__filters-group
-                legend.catalog__filters-title
-                  | Наполнители:
-                .catalog__filters-inner
-                  .checkbox
-                    input.checkbox__input(type='checkbox', id='chocolate', checked)
-                    label.checkbox__label(for='chocolate')
-                      | шоколадные
-                  .checkbox
-                    input.checkbox__input(type='checkbox', id='sugar-powders', checked)
-                    label.checkbox__label(for='sugar-powders')
-                      | сахарные присыпки
-                  .checkbox
-                    input.checkbox__input(type='checkbox', id='fruit')
-                    label.checkbox__label(for='fruit')
-                      | фрукты
-                  .checkbox
-                    input.checkbox__input(type='checkbox', id='syrups')
-                    label.checkbox__label(for='syrups')
-                      | сиропы
-                  .checkbox
-                    input.checkbox__input(type='checkbox', id='jams')
-                    label.checkbox__label(for='jams')
-                      | джемы
-              button.catalog__filters-submit(type='submit')
-                | Применить
+          include ../components/catalog-form.pug
+
           .catalog__items
             .product
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-1.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-1.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 310
@@ -271,7 +204,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-2.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-2.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 380
@@ -291,7 +228,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-3.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-3.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 355
@@ -311,7 +252,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-4.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-4.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 415
@@ -331,7 +276,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-5.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-5.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 325
@@ -351,7 +300,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-6.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-6.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 410
@@ -371,7 +324,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-7.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-7.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 375
@@ -391,7 +348,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-8.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-8.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 320
@@ -411,7 +372,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-9.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-9.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 440
@@ -431,7 +396,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-10.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-10.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 435
@@ -451,7 +420,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-11.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-11.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 355
@@ -471,7 +444,11 @@ block content
               .product__container
                 .product__inner
                   .product__img-wrap
-                    img(src='img/product-12.jpg', width='267', height='267', alt='')
+                    img(
+                      src='img/product-12.jpg'
+                      width='267'
+                      height='267'
+                      alt='')
                   p.product__price.price
                     span.price__number
                       | 420
@@ -487,26 +464,4 @@ block content
                     | Сливочное с мятным сиропом
                 a.product__fast-look.btn(href='#')
                   | Быстрый просмотр
-          .catalog__nav.catalog-nav
-            a.catalog-nav__arrow.catalog-nav__arrow--prev
-              span.visually-hidden
-                | Назад
-            ul.catalog-nav__items
-              li.catalog-nav__item
-                a.catalog-nav__btn
-                  | 1
-              li.catalog-nav__item
-                a.catalog-nav__btn(href='#')
-                  | 2
-              li.catalog-nav__item
-                a.catalog-nav__btn(href='#')
-                  | 3
-              li.catalog-nav__item
-                a.catalog-nav__btn(href='#')
-                  | 4
-              li.catalog-nav__item
-                a.catalog-nav__btn(href='#')
-                  | 5
-            a.catalog-nav__arrow.catalog-nav__arrow--next(href='#')
-              span.visually-hidden
-                | Вперед
+          include ../components/catalog-nav.pug

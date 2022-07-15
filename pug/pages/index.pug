@@ -1,13 +1,14 @@
 doctype html
 html(lang='ru')
   include ../layouts/head.pug
+
   body.index.index--1
     header.page-header
       .page-header__wrapper
         .page-header__container
           .page-header__row.page-header__row--top
             a.page-header__logo.logo
-              svg(width='154', height='64', aria-label='Логотип Глейси')
+              svg(width='154' height='64' aria-label='Логотип Глейси')
                 use(xlink:href='img/symbols.svg#logo')
             nav.page-header__main-nav.main-nav
               ul.main-nav__items.main-nav__items--main
@@ -41,34 +42,39 @@ html(lang='ru')
                     | О Компании
             .page-header__menu.header-menu
               .dropdown
-                a.dropdown__toggle.header-menu__link.header-menu__link--search(href='#')
-                  svg(width='17', height='17')
+                a.dropdown__toggle.header-menu__link.header-menu__link--search(
+                  href='#')
+                  svg(width='17' height='17')
                     use(xlink:href='img/symbols.svg#icon-loupe')
                   span.visually-hidden
                     | Поиск
                 .dropdown__menu
                   .dropdown__menu-inner
-                    form.header-menu__search(action='#', method='post')
+                    form.header-menu__search(action='#' method='post')
                       label
                         span.visually-hidden
                           | Поле поиска
-                        input.field(type='search', placeholder='Что ищем?')
+                        input.field(type='search' placeholder='Что ищем?')
               .dropdown
                 a.dropdown__toggle.header-menu__link(href='#')
-                  svg(width='21', height='19')
+                  svg(width='21' height='19')
                     use(xlink:href='img/symbols.svg#icon-entrance')
                   | Вход
                 .dropdown__menu
                   .dropdown__menu-inner
-                    form.header-menu__login.login(action='#', method='post')
+                    form.header-menu__login.login(action='#' method='post')
                       label
                         span.visually-hidden
                           | Электронная почта
-                        input.field.login__field(type='email', placeholder='Электронная почта')
+                        input.field.login__field(
+                          type='email'
+                          placeholder='Электронная почта')
                       label
                         span.visually-hidden
                           | Пароль
-                        input.field.login__field(type='password', placeholder='Пароль')
+                        input.field.login__field(
+                          type='password'
+                          placeholder='Пароль')
                       .login__footer
                         button.login__submit.btn(type='submit')
                           | Войти
@@ -80,7 +86,7 @@ html(lang='ru')
                             | Новая регистрация
               .dropdown
                 a.header-menu__link.header-menu__link--basket-empty(href='#')
-                  svg(width='21', height='20')
+                  svg(width='21' height='20')
                     use(xlink:href='img/symbols.svg#icon-basket')
                   span
                     | Пусто
@@ -95,248 +101,17 @@ html(lang='ru')
         .main__container
           h1.visually-hidden
             | Магазин мороженного Глэйси
-          section.slider
-            .slider__container
-              h2.visually-hidden
-                | Два мороженых
-              .slider__slides
-                .slider__slide.slide.slide--active
-                  h3.slide__title
-                    | Крем-брюле и пломбир с малиновым джемом
-                  a.slide__link.btn(href='#')
-                    | Давайте оба!
-                .slider__slide.slide
-                  h3.slide__title
-                    | Шоколадный пломбир и лимонный сорбет
-                  a.slide__link.btn(href='#')
-                    | Давайте оба!
-                .slider__slide.slide
-                  h3.slide__title
-                    | Пломбир с помадкой и клубничный щербет
-                  a.slide__link.btn(href='#')
-                    | Давайте оба!
-              .slider__controls
-                  button.slider__control-item(type='button', disabled)
-                    span.visually-hidden
-                      | 1
-                  button.slider__control-item(type='button')
-                    span.visually-hidden
-                      | 2
-                  button.slider__control-item(type='button')
-                    span.visually-hidden
-                      | 3
-          section.promotions
-            h2.visually-hidden
-              | Акции
-            .main__row
-              .main__column
-                .promotions__promotion.promotion.promotion--raspberries
-                  h3.promotion__title
-                    | Малинка даром!
-                  .promotion__description
-                    p
-                      | При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-                  a.promotion__link.btn(href='#')
-                    | Хочу варенье!
-              .main__column
-                .promotions__promotion.promotion.promotion--chocolate
-                  h3.promotion__title
-                    | Шоколадки даром!
-                  .promotion__description
-                    p
-                      | При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
-                  a.promotion__link.btn(href='#')
-                    | Хочу шоколадки!
-          section.best-sellers
-            .best-sellers__container
-              h2.visually-hidden
-                | Популярное
-              .best-sellers__items
-                .best-sellers__item.product
-                  .product__container
-                    .product__inner
-                      .product__flag.product__flag--hit
-                        span.visually-hidden
-                          | Хит
-                      .product__img-wrap
-                        img(src='img/product-1.jpg', width='267', height='267', alt='')
-                      p.product__price.price
-                        span.price__number
-                          | 310
-                        span
-                          |
-                          | &#8381;
-                        span.visually-hidden
-                          | рублей
-                        span.price__measure
-                          | /кг
-                    h3.product__title
-                      a.product__link(href='#')
-                        | Сливочное с апельсиновым джемом и цитрусовой стружкой
-                    a.product__fast-look.btn(href='#')
-                      | Быстрый просмотр
-                .best-sellers__item.product
-                  .product__container
-                    .product__inner
-                      .product__flag.product__flag--hit
-                        span.visually-hidden
-                          | Хит
-                      .product__img-wrap
-                        img(src='img/product-2.jpg', width='267', height='267', alt='')
-                      p.product__price.price
-                        span.price__number
-                          | 380
-                        span
-                          |
-                          | &#8381;
-                        span.visually-hidden
-                          | рублей
-                        span.price__measure
-                          | /кг
-                    h3.product__title
-                      a.product__link(href='#')
-                        | Сливочно-кофейное с кусочками шоколада
-                    a.product__fast-look.btn(href='#')
-                      | Быстрый просмотр
-                .best-sellers__item.product
-                  .product__container
-                    .product__inner
-                      .product__flag.product__flag--hit
-                        span.visually-hidden
-                          | Хит
-                      .product__img-wrap
-                        img(src='img/product-3.jpg', width='267', height='267', alt='')
-                      p.product__price.price
-                        span.price__number
-                          | 355
-                        span
-                          |
-                          | &#8381;
-                        span.visually-hidden
-                          | рублей
-                        span.price__measure
-                          | /кг
-                    h3.product__title
-                      a.product__link(href='#')
-                        | Сливочно-клубничное с присыпкой из белого шоколада
-                    a.product__fast-look.btn(href='#')
-                      | Быстрый просмотр
-                .best-sellers__item.product
-                  .product__container
-                    .product__inner
-                      .product__flag.product__flag--hit
-                        span.visually-hidden
-                          | Хит
-                      .product__img-wrap
-                        img(src='img/product-4.jpg', width='267', height='267', alt='')
-                      p.product__price.price
-                        span.price__number
-                          | 415
-                        span
-                          |
-                          | &#8381;
-                        span.visually-hidden
-                          |
-                          | рублей
-                        span.price__measure
-                          | /кг
-                    h3.product__title
-                      a.product__link(href='#')
-                        | Сливочное крем-брюле с карамельной подливкой
-                    a.product__fast-look.btn(href='#')
-                      | Быстрый просмотр
-          section.info
-            .info__container
-              h2.info__title
-                | Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес
-              .info__items
-                p.info__item.info__item--ice-cream
-                  | Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
-                p.info__item.info__item--farm
-                  | Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-                p.info__item.info__item--natural
-                  | Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
-                p.info__item.info__item--termo
-                  | Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
+          include ../components/slider.pug
+          include ../components/promotions.pug
+          include ../components/best-sellers.pug
+          include ../components/info.pug
+
           .main__row
             .main__column
-              section.blog-news
-                .blog-news__inner
-                  h2.blog-news__title
-                    | Новое в нашем блоге
-                  h3.blog-news__news
-                    a.blog-news__news-link(href='#')
-                      | 10 способов сервировки фруктовых щербетов к столу
+              include ../components/blog-news.pug
+
             .main__column
-              section.subscription
-                .subscription__inner
-                  h2.visually-hidden
-                    | Подписка
-                  p.subscription__description
-                    | Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-                  form.subscription__form(action='#', method='post')
-                    label.subscription__wrap
-                      span.visually-hidden
-                        | Электронная почта
-                      input.subscription__field.field(type='email', placeholder='Электронная почта')
-                    button.subscription__submit.btn(type='submit')
-                      | Отправить
-      section.contacts
-        .contacts__wrapper
-          .contacts__container
-            .contacts__inner
-              h2.visually-hidden
-                | Контакты
-              .contacts__content
-                address.contacts__address
-                  p.contacts__content-row
-                    | Адрес главного офиса
-                    br
-                    | и офлайн-магазина:
-                    br
-                    b
-                      | ул. Большая Конюшенная
-                      br
-                      | 19/8, Санкт-Петербург
-                  p.contacts__content-row
-                    | Для заказов по телефону:
-                    br
-                    b
-                      a.contacts__phone(href='tel:88124502525')
-                        | 8 812 450-25-25
-                    br
-                    | (с 10 до 20 ежедневно)
-                a.contacts__btn.btn(href='#')
-                  | Форма обратной связи
-          section.contacts__feedback.feedback
-            h3.feedback__title
-              | Мы обязательно вам ответим!
-            form.feedback__form(action='#', method='post')
-              .feedback__items
-                .feedback__item
-                  label
-                    span.visually-hidden
-                      | Имя
-                    input.feedback__field.field(type='text', name='name', placeholder='Как вас зовут?')
-                .feedback__item
-                  label
-                    span.visually-hidden
-                      | Электронная почта
-                    input.feedback__field.field(type='email', name='email', placeholder='Ваша почта для ответа?')
-                .feedback__item
-                  label
-                    span.visually-hidden
-                      | Поле для текста
-                    textarea.feedback__field.field(name='message', placeholder='Напишите что-нибудь...')
-              button.feedback__send.btn(type='submit')
-                | Отправить
-            button.feedback__close(type='button')
-              span.visually-hidden
-                | Закрыть
-          .modal__overlay
-        .contacts__map
-          iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002965!2d30.326437710962153!3d59.9387191690544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1544571564035', width='1200', height='428', style='border:0', allowfullscreen='')
-          .contacts__map-img-wrap
-            img(src='img/map.jpg', width='1200', height='428', alt='Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург')
+              include ../components/subscription.pug
+      include ../components/contacts.pug
     include ../layouts/page-footer.pug
     script(src='js/concatenated.js')

@@ -1,0 +1,116 @@
+form.catalog-form(action='#' method='get')
+  .catalog-form__row
+    fieldset.catalog-form__filters-group
+      legend.catalog-form__filters-title
+        | Сортировка:
+      .catalog-form__filters-inner.catalog-form__filters-inner--select
+        .catalog-form__select
+          select.catalog-form__select-picker
+            option
+              | по популярности
+            option
+              | сначала недорогие
+            option
+              | сначала дорогие
+            option
+              | по жирности
+    fieldset.catalog-form__filters-group
+      legend.catalog-form__filters-title
+        | Цена:
+        |
+        span.visually-hidden
+          | От
+        span
+          | 100
+        |
+        | руб. -
+        |
+        span.visually-hidden
+          | До
+        span
+          | 500
+        |
+        | руб.
+      .catalog-form__filters-inner
+        .range-filter
+          .range-filter__scale
+            .range-filter__bar(
+              style='margin-left: 10%; width: 60%;')
+            .range-filter__toggle.range-filter__min-toggle
+            .range-filter__toggle.range-filter__max-toggle
+    fieldset.catalog-form__filters-group
+      legend.catalog-form__filters-title
+        | Жирность:
+      .catalog-form__filters-inner
+        .radiobox
+          input.radiobox__input(
+            type='radio'
+            id='zero'
+            name='fat-content')
+          label.radiobox__label(for='zero')
+            span
+              | 0%
+        .radiobox
+          input.radiobox__input(
+            type='radio'
+            id='to-10'
+            name='fat-content'
+            checked)
+          label.radiobox__label(for='to-10')
+            span
+              | До 10%
+        .radiobox
+          input.radiobox__input(
+            type='radio'
+            id='to-30'
+            name='fat-content')
+          label.radiobox__label(for='to-30')
+            span
+              | До 30%
+        .radiobox
+          input.radiobox__input(
+            type='radio'
+            id='above-30'
+            name='fat-content')
+          label.radiobox__label(for='above-30')
+            span
+              | Выше 30%
+  .catalog-form__row
+    fieldset.catalog-form__filters-group
+      legend.catalog-form__filters-title
+        | Наполнители:
+      .catalog-form__filters-inner
+        .checkbox
+          input.checkbox__input(
+            type='checkbox'
+            id='chocolate'
+            checked)
+          label.checkbox__label(for='chocolate')
+            | шоколадные
+        .checkbox
+          input.checkbox__input(
+            type='checkbox'
+            id='sugar-powders'
+            checked)
+          label.checkbox__label(for='sugar-powders')
+            | сахарные присыпки
+        .checkbox
+          input.checkbox__input(
+            type='checkbox'
+            id='fruit')
+          label.checkbox__label(for='fruit')
+            | фрукты
+        .checkbox
+          input.checkbox__input(
+            type='checkbox'
+            id='syrups')
+          label.checkbox__label(for='syrups')
+            | сиропы
+        .checkbox
+          input.checkbox__input(
+            type='checkbox'
+            id='jams')
+          label.checkbox__label(for='jams')
+            | джемы
+    button.catalog-form__submit(type='submit')
+      | Применить
