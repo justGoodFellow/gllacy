@@ -8,49 +8,45 @@
   @include list-reset;
 }
 
-.main-nav__items--main {
-  & > li {
-    & > .main-nav__link {
-      display: inline-block;
-      margin-right: 5px;
-      padding: 0 15px;
+.main-nav__link {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 0 15px;
 
-      font-weight: 500;
-      line-height: 32px;
-      vertical-align: top;
-      text-decoration: none;
+  font-weight: 500;
+  line-height: 32px;
+  vertical-align: top;
+  text-decoration: none;
 
-      border-radius: 30px;
+  border-radius: 30px;
 
+  &:hover,
+  &:focus {
+    color: $gray--dark;
+    text-decoration: none;
+
+    background-color: $gray--light;
+
+    &[href] {
+      &:active {
+        font-weight: 700;
+
+        background-color: #ededed;
+        box-shadow: inset 0 2px 1px dimgray;
+      }
+    }
+  }
+
+  &--active {
+    font-weight: 400;
+    color: white;
+
+    background-color: $color-red--light;
+
+    &[href] {
       &:hover,
       &:focus {
-        color: $gray--dark;
-        text-decoration: none;
-
-        background-color: $gray--light;
-
-        &[href] {
-          &:active {
-            font-weight: 700;
-
-            background-color: #ededed;
-            box-shadow: inset 0 2px 1px #696969;
-          }
-        }
-      }
-
-      &--active {
-        font-weight: 400;
-        color: white;
-
-        background-color: $color-red--light;
-
-        &[href] {
-          &:hover,
-          &:focus {
-            font-weight: 700;
-          }
-        }
+        font-weight: 700;
       }
     }
   }
@@ -63,52 +59,4 @@
 
 .main-nav .dropdown__menu-inner {
   padding: 5px 0;
-}
-
-.main-nav__items--lvl2 {
-  flex-direction: column;
-
-  .main-nav__link {
-    display: block;
-    padding: 0 20px;
-
-    font-size: 14px;
-    line-height: 30px;
-    vertical-align: top;
-    color: $gray--dark;
-    text-decoration: none;
-    white-space: nowrap;
-
-    background-color: $gray--light;
-
-    &[href] {
-      &:hover,
-      &:focus {
-        background-color: #fbded7;
-      }
-
-      &:active {
-        background-color: #f6b5a5;
-      }
-    }
-
-    &:not([href]) {
-      color: white;
-
-      background-color: #d07058;
-    }
-  }
-}
-
-.main-nav__items--lvl2-top {
-  font-weight: 700;
-
-  &::after {
-    content: '';
-
-    height: 1px;
-    margin: 0 10px;
-
-    background-color: rgba($gray--dark, 0.2);
-  }
 }

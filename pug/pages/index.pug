@@ -11,28 +11,28 @@ html(lang='ru')
               svg(width='154' height='64' aria-label='Логотип Глейси')
                 use(xlink:href='img/symbols.svg#logo')
             nav.page-header__main-nav.main-nav
-              ul.main-nav__items.main-nav__items--main
+              ul.main-nav__items
                 li.main-nav__item.dropdown
-                  a.dropdown__toggle.main-nav__link(href='#')
+                  a.main-nav__link(href='#')
                     | Каталог
                   .dropdown__menu
                     .dropdown__menu-inner
-                      ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
-                        li.main-nav__item
-                          a.main-nav__link(href='#')
+                      ul.dropdown__items.dropdown__items--top
+                        li.dropdown__item
+                          a.dropdown__link(href='#')
                             | Новинки
-                      ul.main-nav__items.main-nav__items--lvl2
-                        li.main-nav__item
-                          a.main-nav__link(href='catalog.html')
+                      ul.dropdown__items
+                        li.dropdown__item
+                          a.dropdown__link(href='catalog.html')
                             | Сливочное
-                        li.main-nav__item
-                          a.main-nav__link(href='#')
+                        li.dropdown__item
+                          a.dropdown__link(href='#')
                             | Щербеты
-                        li.main-nav__item
-                          a.main-nav__link(href='#')
+                        li.dropdown__item
+                          a.dropdown__link(href='#')
                             | Фруктовый лед
-                        li.main-nav__item
-                          a.main-nav__link(href='#')
+                        li.dropdown__item
+                          a.dropdown__link(href='#')
                             | Мелорин
                 li.main-nav__item
                   a.main-nav__link(href='#')
@@ -42,7 +42,7 @@ html(lang='ru')
                     | О Компании
             .page-header__menu.header-menu
               .dropdown
-                a.dropdown__toggle.header-menu__link.header-menu__link--search(
+                a.header-menu__link.header-menu__link--search(
                   href='#')
                   svg(width='17' height='17')
                     use(xlink:href='img/symbols.svg#icon-loupe')
@@ -56,7 +56,7 @@ html(lang='ru')
                           | Поле поиска
                         input.field(type='search' placeholder='Что ищем?')
               .dropdown
-                a.dropdown__toggle.header-menu__link(href='#')
+                a.header-menu__link(href='#')
                   svg(width='21' height='19')
                     use(xlink:href='img/symbols.svg#icon-entrance')
                   | Вход

@@ -11,29 +11,29 @@ block content
             svg(width='154' height='64' aria-label='Логотип Глейси')
               use(xlink:href='img/symbols.svg#logo')
           nav.page-header__main-nav.main-nav
-            ul.main-nav__items.main-nav__items--main
+            ul.main-nav__items
               li.main-nav__item.dropdown
-                a.page-header__dropdown-toggle.main-nav__link.main-nav__link--active(
+                a.main-nav__link.main-nav__link--active(
                   href='#')
                   | Каталог
                 .dropdown__menu
                   .dropdown__menu-inner
-                    ul.main-nav__items.main-nav__items--lvl2.main-nav__items--lvl2-top
-                      li.main-nav__item
-                        a.main-nav__link(href='#')
+                    ul.dropdown__items.dropdown__items--top
+                      li.dropdown_item
+                        a.dropdown__link(href='#')
                           | Новинки
-                    ul.main-nav__items.main-nav__items--lvl2
-                      li.main-nav__item
-                        a.main-nav__link
+                    ul.dropdown__items
+                      li.dropdown__item
+                        a.dropdown__link
                           | Сливочное
-                      li.main-nav__item
-                        a.main-nav__link(href='#')
+                      li.dropdown__item
+                        a.dropdown__link(href='#')
                           | Щербеты
-                      li.main-nav__item
-                        a.main-nav__link(href='#')
+                      li.dropdown__item
+                        a.dropdown__link(href='#')
                           | Фруктовый лед
-                      li.main-nav__item
-                        a.main-nav__link(href='#')
+                      li.dropdown__item
+                        a.dropdown__link(href='#')
                           | Мелорин
               li.main-nav__item
                 a.main-nav__link(href='#')
@@ -43,7 +43,7 @@ block content
                   | О Компании
           .page-header__menu.header-menu
             .dropdown
-              a.dropdown__toggle.header-menu__link.header-menu__link--search(
+              a.header-menu__link.header-menu__link--search(
                 href='#')
                 svg(width='17' height='17')
                   use(xlink:href='img/symbols.svg#icon-loupe')
@@ -57,7 +57,7 @@ block content
                         | Поле поиска
                       input.field(type='search' placeholder='Что ищем?')
             .dropdown
-              a.dropdown__toggle.header-menu__link(href='#')
+              a.header-menu__link(href='#')
                 svg(width='21' height='19')
                   use(xlink:href='img/symbols.svg#icon-entrance')
                 | Вход
@@ -86,7 +86,7 @@ block content
                         a.login__link(href='#')
                           | Новая регистрация
             .dropdown
-              a.dropdown__toggle.header-menu__link.header-menu__link--basket-active(
+              a.header-menu__link.header-menu__link--basket-active(
                 href='#')
                 svg(width='21' height='20')
                   use(xlink:href='img/symbols.svg#icon-basket')
